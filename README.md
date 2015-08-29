@@ -1,2 +1,2 @@
 # simplesthing.com
-Personal Site
+Personal site.

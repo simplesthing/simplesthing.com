@@ -1,0 +1,52 @@
+$add-sm: -0px -0px 29px 29px;
+$add-outlined: -0px -29px 30px 30px;
+$add-outlined-active: -0px -59px 30px 30px;
+$job-app-logo: -0px -89px 45px 34px;
+$add-lg: -0px -123px 34px 34px;
+$job-search-logo: -0px -157px 41px 40px;
+$resumes-logo: -0px -197px 37px 42px;
+$goals-logo: -0px -239px 43px 43px;
+$skills-logo: -0px -282px 41px 44px;
+$advanced: -0px -326px 45px 45px;
+$advanced-active: -0px -371px 45px 45px;
+$add-sm-ret: -0px -416px 50px 50px;
+$add-outlined-active-ret: -0px -466px 52px 52px;
+$add-outlined-ret: -0px -518px 52px 52px;
+$add-lg-ret: -0px -570px 60px 60px;
+$advanced-ret: -0px -630px 82px 82px;
+$advanced-active-ret: -0px -712px 82px 82px;
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+
+@function sprite-width($sprite) {
+  @return nth($sprite, 3);
+}
+
+@function sprite-height($sprite) {
+  @return nth($sprite, 4);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x $sprite-offset-y;
+}
+
+@mixin sprite($sprite, $display: block) {
+  @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: $display;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+.icon {
+  background-image: url("../images/sprite.png");
+}
