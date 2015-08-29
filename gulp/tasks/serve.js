@@ -90,6 +90,7 @@ gulp.task('serve', function(){
     ['scripts', 'styles', 'wiredep', 'images'],
     'html',
     'copy',
+    'fonts',
     'inject',
     'watch',
     serveCallback

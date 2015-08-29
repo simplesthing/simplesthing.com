@@ -11,12 +11,19 @@
   ])
   .config([ '$stateProvider','$urlRouterProvider', '$locationProvider',
     function($stateProvider, $urlRouterProvider, $locationProvider){
-      // For any unmatched url, redirect to /overview
-      $urlRouterProvider.when('', '/style-guide');
+      $urlRouterProvider.when('', '/home');
 
       $stateProvider
-        .state('styles', {
-          url: '/style-guide',
+        .state('home', {
+          url: '/home',
+          views : {
+            'main' : {
+              templateUrl : 'app/views/home/home.html'
+            }
+          }
+        })
+        .state('style', {
+          url: '/style',
           views : {
             'main' : {
               templateUrl : 'app/views/style-guide/style-guide.html'
