@@ -328,9 +328,9 @@ hr {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Open Sans", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.1;
-  color: #0A0A0A; }
+  color: inherit; }
   h1 small,
   h1 .small, h2 small,
   h2 .small, h3 small,
@@ -7593,5 +7593,18 @@ div.layouts div.tertiary {
     margin-top: 0; }
   .ns-popover-tooltip-theme.ns-popover-bottom-align .ns-popover-tooltip {
     margin-bottom: 0; }
+
+.col {
+  height: 790px;
+  display: block;
+  margin: 0 auto;
+  background: url(../images/background.jpg) no-repeat center center;
+  text-align: center; }
+
+.message {
+  font-size: 18px;
+  color: #515151;
+  position: relative;
+  top: 40%; }
 
 /*# sourceMappingURL=../maps/styles.css.map */

@@ -1,0 +1,13 @@
+.col {
+  height: 790px;
+  display: block;
+  margin: 0 auto;
+  background: url(../images/background.jpg) no-repeat center center;
+  text-align: center;
+}
+.message {
+  font-size: $font-size-large;
+  color: $gray-dark;
+  position:relative;
+  top: 40%;
+}
