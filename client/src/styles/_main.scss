@@ -31,7 +31,7 @@ a, select {
     font-family: $sansita;
     font-size:2.25em;
     line-height: 18px;
-   &:hover {
+   &:hover, &:focus {
       text-decoration: none;
     }
   }

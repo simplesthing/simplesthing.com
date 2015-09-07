@@ -5302,12 +5302,12 @@ a, select {
 /** HEADER **/
 .site-title {
   float: left;
-  margin: 7px; }
+  margin: 7px 30px; }
   .site-title .logo {
     font-family: "Sansita One", cursive;
     font-size: 2.25em;
     line-height: 18px; }
-    .site-title .logo:hover {
+    .site-title .logo:hover, .site-title .logo:focus {
       text-decoration: none; }
 
 .header-links {
