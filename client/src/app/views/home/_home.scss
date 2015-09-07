@@ -1,4 +1,15 @@
-.col {
+.header-links {
+  list-style:none;
+  margin-right:30px;
+  li {
+    float:right;
+    margin-right: 10px;
+  }
+  i {
+    font-size: 30px;
+  }
+}
+.bg {
   height: 790px;
   display: block;
   margin: 0 auto;
