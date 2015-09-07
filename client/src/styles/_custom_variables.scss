@@ -23,8 +23,8 @@ $gray-dark  : #515151 !default;
 $green-lo   : #579D3D;
 $green-hi   : #0D9B11;
 
-$red: #E0280E;
-$orange: #FF6200;
+$red: #c70000;
+$orange: #ff3305;
 $yellow: #FFDC12;
 $blue: #0B0DC2;
 $light-blue: #0DC7FF;
@@ -54,15 +54,16 @@ $body-bg:               $white !default;
 $text-color:            $black !default;
 
 // //** Global textual link color.
-$link-color:            $green-hi !default;
+$link-color:            $gray-light !default;
 // //** Link hover color set via `darken()` function.
-$link-hover-color      : $gray;
+$link-hover-color      : $orange;
 // //** Link hover decoration.
 // $link-hover-decoration: none !default;
 
 
 //== Typography
-//
+$sansita: 'Sansita One', cursive;
+$open-sans:'Open Sans', sans-serif;
 //## Font, line-height, and color for body text, headings, and more.
 
 $font-family-sans-serif:  "Open Sans", Arial, sans-serif !default;
@@ -95,7 +96,7 @@ $font-size-h5:            $font-size-base !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    $font-family-sans-serif !default;
-$headings-font-weight:    bold !default;
+$headings-font-weight:    800 !default;
 // $headings-line-height   : 1.1 !default;
 // $headings-color:          $black !default;
 
