@@ -7,8 +7,8 @@
     "lint": "gulp git",
     "test": "gulp test"
   },
-  "author": "Aptmius",
-  "license": "ISC",
+  "author": "Ava Collins",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/simplesthing/simplesthing.com.git"
