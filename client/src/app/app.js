@@ -8,8 +8,7 @@
     'ui.bootstrap',
     'ui.router',
     'ngSanitize',
-    'cgBusy',
-    'angularD3Chart'
+    'cgBusy'
   ])
   .config([ '$stateProvider','$urlRouterProvider', '$locationProvider',
     function($stateProvider, $urlRouterProvider, $locationProvider){
@@ -24,14 +23,14 @@
             }
           }
         })
-        .state('charts', {
-          url: '/charts',
-          views: {
-            'main' : {
-              templateUrl: 'app/views/charts/charts.html'
-            }
-          }
-        })
+        // .state('charts', {
+        //   url: '/charts',
+        //   views: {
+        //     'main' : {
+        //       templateUrl: 'app/views/charts/charts.html'
+        //     }
+        //   }
+        // })
         .state('style', {
           url: '/style',
           views : {

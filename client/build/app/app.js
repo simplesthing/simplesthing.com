@@ -3,7 +3,7 @@
 
 (function (window, angular, undefined) {
 
-  angular.module('simplesthing', ['ngLodash', 'ui.bootstrap', 'ui.router', 'ngSanitize', 'cgBusy', 'angularD3Chart']).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  angular.module('simplesthing', ['ngLodash', 'ui.bootstrap', 'ui.router', 'ngSanitize', 'cgBusy']).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.when('', '/home');
 
     $stateProvider.state('home', {
@@ -13,14 +13,16 @@
           templateUrl: 'app/views/home/home.html'
         }
       }
-    }).state('charts', {
-      url: '/charts',
-      views: {
-        'main': {
-          templateUrl: 'app/views/charts/charts.html'
-        }
-      }
-    }).state('style', {
+    })
+    // .state('charts', {
+    //   url: '/charts',
+    //   views: {
+    //     'main' : {
+    //       templateUrl: 'app/views/charts/charts.html'
+    //     }
+    //   }
+    // })
+    .state('style', {
       url: '/style',
       views: {
         'main': {
