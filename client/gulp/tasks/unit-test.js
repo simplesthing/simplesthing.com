@@ -39,6 +39,7 @@ function listFiles(callback) {
   gulp.src(srcFiles)
     .pipe(concat(function(files){
       callback(bowerDeps.js
+        .concat(path.join(config.root, '/node_modules/ng-describe/dist/ng-describe.js'))
         .concat(_.pluck(files, 'path'))
         .concat(htmlFiles)
         .concat(jsonFiles)

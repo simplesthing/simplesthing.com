@@ -1,0 +1,74 @@
+<article ng-controller="ChartsController as ctrl">
+  <div class="one-col">
+  <div class="row">
+    <div class="col full">
+      <div class="two-col full">
+        <div class="row">
+          <div class="col">
+             <d3-chart id="top-10-people" config="ctrl.people">
+              <horizontal-bar></horizontal-bar>
+             </d3-chart>
+          </div>
+          <div class="col">
+             <d3-chart id="top-10-animals" config="ctrl.animals">
+              <horizontal-bar></horizontal-bar>
+             </d3-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    <p>I'm going to use alot of buzz words and mention the ues of  frameworks that you're probably tired of hearing about, but I promise to be quick.</p>
+      <p>
+        Every possible buzz word for D3 charts throw in some angular. The purpose is to be be able to compose charts out of reusable, extendable, directives to create D3 charts, using <a href="http://misoproject.com/d3-chart/">miso d3.chart framework</a> from Bouccup. I originally set out to make my own angular D3 configuration but soon realized D3 needs it's own event and update system defined which felt like I was duplicating alor of work that I would need to add everything that the authors of miso already had.
+      </p>
+
+      <p>
+        Angular directives provide the reusable aspect of creating self contained, repeatable, extendable modules of code that can be easily implemented by passing in a configuration object that defines custom service providers and event callbacks.
+      </p>
+     <p>
+        The UI should be composable by optionally adding a directive to the DOM and have it appear as an integrated component of the chart. These components should be self contained and operate independently of each other, with their only dependency being on the chart controller.
+      </p>
+      <pre>
+      &lt;d3-chart id="test" config="ctrl.chart"&gt;&lt;/d3-chart&gt;
+      </pre>
+      <p>The chart is the top level container and it's controller is the <a href="https://en.wikipedia.org/wiki/Observer_pattern">'subject'</a> in an observer pattern where it keeps a list of dependent directives and their callbacks, and notifies them when any state changes occur. The chart directive is responsible for attaching the chart SVG element to the DOM, connecting to the shared controller, listen for changes to the viewport or data and trigger the notifications in the controller.
+      </p>
+      <p>
+        The configuration object passes in width and height properties as proportional ratios which are processe by the chart service to calculate the chart's width and height.
+      </p>
+      <p>
+        The d3 directive responsible for drawing a chart type will be the initiator of data updates. It's responsibility is to add a miso d3.chart to the SVG element and to send draw updates to the miso chart when data changes. It does this by registering listeners with the chart controller for an init event, which is the initial adding of the DOM elements and the update event which occurs anytime there is a change in data.
+      </p>
+
+
+    </div>
+  </div>
+    <div class="row">
+      <div class="col">
+
+        <h1>Chart</h1>
+        <h2>Chart Directive</h2>
+        <p>
+          <ul>
+            <li>
+              Adds a class to the chart.
+            </li>
+            <li>
+              Assigns the config an id parameter.
+            </li>
+            <li>
+              Initializes chart.
+            </li>
+          </ul>
+        </p>
+        <h2>Chart Controller</h2>
+        <p></p>
+        <h2>Chart Service</h2>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</article>

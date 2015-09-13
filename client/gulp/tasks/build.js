@@ -17,3 +17,15 @@ gulp.task('build', function(){
     'inject'
   );
 });
+
+
+gulp.task('testAndBuild', function(){
+  runSequence(
+    ['clean:dist', 'test'],
+    ['wiredep:dist','images:dist'],
+    ['scripts:dist', 'styles:dist', 'html:dist', 'fonts:dist', 'apti-status'],
+    'copy:dist',
+    'inject:dist',
+    'war'
+  );
+});

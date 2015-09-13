@@ -1,3 +1,4 @@
+
 'use strict';
 
 (function(window, angular, undefined) {
@@ -7,7 +8,8 @@
     'ui.bootstrap',
     'ui.router',
     'ngSanitize',
-    'cgBusy'
+    'cgBusy',
+    'angularD3Chart'
   ])
   .config([ '$stateProvider','$urlRouterProvider', '$locationProvider',
     function($stateProvider, $urlRouterProvider, $locationProvider){
@@ -19,6 +21,14 @@
           views : {
             'main' : {
               templateUrl : 'app/views/home/home.html'
+            }
+          }
+        })
+        .state('charts', {
+          url: '/charts',
+          views: {
+            'main' : {
+              templateUrl: 'app/views/charts/charts.html'
             }
           }
         })

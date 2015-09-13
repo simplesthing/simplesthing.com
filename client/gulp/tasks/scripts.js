@@ -4,6 +4,7 @@ var config = require('../config');
 var gulp   = require('gulp');
 var $      = require('gulp-load-plugins')({lazy: true});
 var path   = require('path');
+var sort   = require('sort-stream');
 
 /**
  * Lint app JS for errors, transpile ES6 to ES5 and copy to /build
@@ -45,7 +46,14 @@ gulp.task('scripts:dist', function(){
           .pipe($.jshint.reporter('fail'))
           .pipe($.babel())
           .pipe($.ngAnnotate())
-          .pipe($.angularFilesort())
+          .pipe($.if('*.miso.js', sort(function (a, b) {
+                  if (a > b) {return 1;}
+                  if (a < b) {return -1;}
+                  return 0;
+                }), $.angularFilesort())
+          )
+
+          // .pipe()
           .pipe($.concat('app.js'))
           .pipe($.uglify({
             mangle: false

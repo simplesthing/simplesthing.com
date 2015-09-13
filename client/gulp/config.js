@@ -6,6 +6,7 @@ var gitReporter  = require('./util/gitReporter');
 
 // default config
 var defaultConfig = {
+    root         : './',
     src          : 'src',
     build        : 'build',
     dist         : 'dist',
@@ -50,7 +51,7 @@ var defaultConfig = {
     htmlhint      : '.htmlhintrc',
     htmlTemplates  : ['src/app/**/*.html', '!src/index.html' ],
     templateCache : {
-      module  : 'simplesthing',
+      module  : 'admin-dashboard',
       root    : 'app'
     },
     deploy     : {

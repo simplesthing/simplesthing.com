@@ -8,7 +8,7 @@ var httpProxy   = require('http-proxy');
 
 var proxy = httpProxy.createProxyServer({
   // TODO: add ability to use yargs for environment switching of multiple targets
-  target : 'https://simplesthing.com/api',
+  target : 'https://developer.devint.aptimus.net',
   rejectUnauthorized: false,
   secure: false
 });
@@ -21,6 +21,7 @@ proxy.on('error', function(error, req, res) {
  config.log('Proxy Error' + error);
 });
 
+// TODO: implement after added ability to check yargs
 // if (args.verbose) {
 //  proxy.on('proxyRes', function(proxyRes, req, res) {
 //    config.log('Response headers ', JSON.stringify(proxyRes.headers, true, 2));
@@ -87,10 +88,11 @@ function serveDistCallback() {
 gulp.task('serve', function(){
   runSequence(
     'clean',
-    ['scripts', 'styles', 'wiredep', 'images'],
+    // 'images',
+    ['scripts', 'wiredep'],
+    'styles',
     'html',
     'copy',
-    'fonts',
     'inject',
     'watch',
     serveCallback

@@ -35,6 +35,15 @@ gulp.task('help:app', function(){
     '            '+$.util.colors.white.bgBlue.bold('                                                 ')+' \n' +
     '            '+$.util.colors.white.bgBlue.bold(tagLine)+' \n' +
     '            '+$.util.colors.white.bgBlue.bold('                                                 ')+' \n' +
+    ' \n' +
+    ' \n' +
+    '      Usage: '+' \n' +
+    '        gulp [option] \n' +
+    ' \n' +
+    ' \n' +
+    '      Options: '+' \n' +
+    '        serve            Build project for local development, serve browser then watch files'+' \n' +
+    '        build            Build project for production and place into /dist'+' \n' +
     ' \n'
   );
 });
