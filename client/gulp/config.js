@@ -51,7 +51,7 @@ var defaultConfig = {
     htmlhint      : '.htmlhintrc',
     htmlTemplates  : ['src/app/**/*.html', '!src/index.html' ],
     templateCache : {
-      module  : 'admin-dashboard',
+      module  : 'simplesthing',
       root    : 'app'
     },
     deploy     : {
