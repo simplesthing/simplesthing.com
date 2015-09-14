@@ -1,3 +1,4 @@
+'use strict';
 (function(window, angular, undefined){
   function ChartsController(ExampleDataService){
     let model = this;

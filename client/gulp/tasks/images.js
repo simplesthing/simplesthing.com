@@ -10,12 +10,14 @@ var runSequence = require('run-sequence');
  * Create a sprite sheet out of images in /images/sprites
  */
 gulp.task('images', function(){
-  return sprity.src({
-    src       : config.sprites,
-    style     : '_sprite.scss',
-    processor : 'sass'
-  })
-  .pipe($.if('*.{png,jpg,gif}', gulp.dest(path.join(config.src, '/images')), gulp.dest(path.join(config.src, '/styles'))));
+  return;
+  // return sprity.src({
+  //   src       : config.sprites,
+  //   style     : '_sprite.scss',
+  //   processor : 'sass'
+  // })
+  // .on('error', config.errorHandler('images'))
+  // .pipe($.if('*.{png,jpg,gif}', gulp.dest(path.join(config.src, '/images')), gulp.dest(path.join(config.src, '/styles'))));
 });
 /**
  * Compress images and move to /dist
