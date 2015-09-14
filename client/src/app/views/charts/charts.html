@@ -2,16 +2,13 @@
   <div class="one-col">
   <div class="row">
     <div class="col full">
-      <div class="two-col full">
+      <div class="ten-off-one full">
         <div class="row">
           <div class="col">
-             <d3-chart id="top-10-people" config="ctrl.people">
+             <d3-chart id="top-10" config="ctrl.chart">
+              <chart-header></chart-header>
               <horizontal-bar></horizontal-bar>
-             </d3-chart>
-          </div>
-          <div class="col">
-             <d3-chart id="top-10-animals" config="ctrl.animals">
-              <horizontal-bar></horizontal-bar>
+              <chart-footer></chart-footer>
              </d3-chart>
           </div>
         </div>
