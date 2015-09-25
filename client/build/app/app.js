@@ -10,7 +10,7 @@
       url: '/home',
       views: {
         'nav': {
-          templateUrl: 'app/views/nav/navbar.html'
+          templateUrl: 'app/views/navbar/navbar.html'
         },
         'main': {
           templateUrl: 'app/views/home/home.html'
@@ -23,7 +23,7 @@
       url: '/archive',
       views: {
         'nav': {
-          templateUrl: 'app/views/nav/navbar.html'
+          templateUrl: 'app/views/navbar/navbar.html'
         },
         'main': {
           templateUrl: 'app/views/archive/archive.html'
