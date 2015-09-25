@@ -13,7 +13,8 @@
   ])
   .config([ '$stateProvider','$urlRouterProvider', '$locationProvider',
     function($stateProvider, $urlRouterProvider, $locationProvider){
-      $urlRouterProvider.when('', '/home');
+      // $urlRouterProvider.when('', '/home');
+      $urlRouterProvider.otherwise("/home");
 
       $stateProvider
         .state('home', {

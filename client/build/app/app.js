@@ -4,7 +4,8 @@
 (function (window, angular, undefined) {
 
   angular.module('simplesthing', ['ngLodash', 'ui.bootstrap', 'ui.router', 'ngSanitize', 'cgBusy', 'duScroll']).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider.when('', '/home');
+    // $urlRouterProvider.when('', '/home');
+    $urlRouterProvider.otherwise("/home");
 
     $stateProvider.state('home', {
       url: '/home',
