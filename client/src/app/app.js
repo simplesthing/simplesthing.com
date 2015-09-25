@@ -9,7 +9,7 @@
     'ui.router',
     'ngSanitize',
     'cgBusy',
-    'angularD3Miso'
+    'duScroll'
   ])
   .config([ '$stateProvider','$urlRouterProvider', '$locationProvider',
     function($stateProvider, $urlRouterProvider, $locationProvider){
@@ -19,16 +19,28 @@
         .state('home', {
           url: '/home',
           views : {
+            'nav'  : {
+              templateUrl: 'app/views/nav/navbar.html'
+            },
             'main' : {
               templateUrl : 'app/views/home/home.html'
+            },
+            'footer' : {
+              templateUrl: 'app/views/footer/footer.html'
             }
           }
         })
-        .state('charts', {
-          url: '/charts',
+        .state('archive', {
+          url: '/archive',
           views: {
-            'main' : {
-              templateUrl: 'app/views/charts/charts.html'
+            'nav'  : {
+              templateUrl: 'app/views/nav/navbar.html'
+            },
+            'main': {
+              templateUrl : 'app/views/archive/archive.html'
+            },
+            'footer' : {
+              templateUrl: 'app/views/footer/footer.html'
             }
           }
         })

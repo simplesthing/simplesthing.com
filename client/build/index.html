@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Analytics dashboard application.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ava Collins | Web Developer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal website for JavaScript developer Ava Collins">
+    <meta name="author" content="Ava Collins">
 
-  <!-- bower:css -->
-  <link rel='stylesheet' href='../bower_components/angular-busy/dist/angular-busy.css' />
-  <link rel='stylesheet' href='../bower_components/fontawesome/css/font-awesome.css' />
-  <link rel='stylesheet' href='../bower_components/angular-d3-miso/dist/angular-d3-miso.css' />
-  <link rel='stylesheet' href='../bower_components/ngDialog/css/ngDialog.css' />
-  <link rel='stylesheet' href='../bower_components/ngDialog/css/ngDialog-theme-default.css' />
-  <!-- endbower -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:700,300,600,400" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+    <title>Ava Collins | Web Developer</title>
 
-  <!-- inject:css -->
-  <link rel="stylesheet" href="styles/styles.css">
-  <!-- endinject -->
+    <!-- bower:css -->
+    <link rel='stylesheet' href='../bower_components/angular-busy/dist/angular-busy.css' />
+    <link rel='stylesheet' href='../bower_components/fontawesome/css/font-awesome.css' />
+    <!-- endbower -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="styles/freelancer.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- endinject -->
+
+
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
+<body id="page-top" class="index" ng-app="simplesthing">
 
-<body ng-app="simplesthing">
-  <!-- bower:js -->
-  <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../bower_components/angular/angular.js"></script>
-  <script src="../bower_components/angular-aria/angular-aria.js"></script>
-  <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <script src="../bower_components/angular-animate/angular-animate.js"></script>
-  <script src="../bower_components/angular-busy/dist/angular-busy.js"></script>
-  <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
-  <script src="../bower_components/d3/d3.js"></script>
-  <script src="../bower_components/d3.chart/d3.chart.js"></script>
-  <script src="../bower_components/ng-resize/ngresize.js"></script>
-  <script src="../bower_components/angular-d3-miso/dist/angular-d3-miso.js"></script>
-  <script src="../bower_components/moment/moment.js"></script>
-  <script src="../bower_components/angular-moment/angular-moment.js"></script>
-  <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="../bower_components/checklist-model/checklist-model.js"></script>
-  <script src="../bower_components/ng-lodash/build/ng-lodash.js"></script>
-  <script src="../bower_components/ngDialog/js/ngDialog.js"></script>
-  <script src="../bower_components/lodash/lodash.js"></script>
-  <script src="../bower_components/restangular/dist/restangular.js"></script>
-  <!-- endbower -->
-  <!-- inject:js -->
-  <script src="app/app.js"></script>
-  <script src="app/views/home/home-controller.js"></script>
-  <script src="app/views/charts/charts-controller.js"></script>
-  <script src="app/services/example-data-service.js"></script>
-  <script src="app/libs/d3.js"></script>
-  <!-- endinject -->
-  <div ui-view="main"></div>
+    <div ui-view="nav"></div>
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-busy/dist/angular-busy.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="../bower_components/checklist-model/checklist-model.js"></script>
+    <script src="../bower_components/ng-lodash/build/ng-lodash.js"></script>
+    <script src="../bower_components/lodash/lodash.js"></script>
+    <script src="../bower_components/restangular/dist/restangular.js"></script>
+    <!-- endbower -->
+    <!-- inject:js -->
+    <script src="app/app.js"></script>
+    <script src="app/views/home/home-controller.js"></script>
+    <script src="app/views/archive/archive-controller.js"></script>
+    <script src="app/services/example-data-service.js"></script>
+    <script src="app/libs/freelancer.js"></script>
+    <script src="app/libs/d3.js"></script>
+    <script src="app/libs/classie.js"></script>
+    <script src="app/libs/cbpAnimatedHeader.js"></script>
+    <!-- endinject -->
+
+    <div ui-view="main"></div>
+
+    <div ui-view="footer"></div>
+
 </body>
+
 </html>

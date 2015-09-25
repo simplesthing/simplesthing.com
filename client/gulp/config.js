@@ -45,7 +45,7 @@ var defaultConfig = {
       bowerJson    : require('../bower.json'),
       directory    : './bower_components/',
       ignorePath   : '../..',
-      exclude      : [/bootstrap-sass-official\/.*\.js/, /bootstrap\.css/]
+      exclude      : [ /bootstrap\.css/]
     },
     jshint        : '.jshintrc',
     htmlhint      : '.htmlhintrc',

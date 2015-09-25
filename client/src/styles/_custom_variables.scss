@@ -18,7 +18,7 @@ $white      : #FFFFFF;
 
 // Palette
 $gray       : #9D9D9D !default;
-$gray-light : #C2C2C2 !default;
+$gray-light : #FCFCFC !default;
 $gray-dark  : #515151 !default;
 $green-lo   : #579D3D;
 $green-hi   : #0D9B11;
@@ -54,7 +54,7 @@ $body-bg:               $white !default;
 $text-color:            $black !default;
 
 // //** Global textual link color.
-$link-color:            $gray-light !default;
+$link-color:            $gray !default;
 // //** Link hover color set via `darken()` function.
 $link-hover-color      : $orange;
 // //** Link hover decoration.
@@ -66,19 +66,19 @@ $sansita: 'Sansita One', cursive;
 $open-sans:'Open Sans', sans-serif;
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Open Sans", Arial, sans-serif !default;
-$font-family-serif:       "Adobe Garamond Pro", "Times New Roman", Times, serif !default;
+// $font-family-sans-serif:  "Open Sans", Arial, sans-serif !default;
+// $font-family-serif:       "Adobe Garamond Pro", "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 // $font-family-monospace  : Menlo, Monaco, Consolas, "Courier New", monospace !default;
 // $font-family-base       : $font-family-sans-serif !default;
-$font-size-large: 18px;
-$font-size-small: 10px;
-$font-size-smallest: 9px;
+// $font-size-large: 18px;
+// $font-size-small: 10px;
+// $font-size-smallest: 9px;
 // $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~20px
 // $font-size-small:         ceil(($font-size-base * 0.87)) !default; // ~14px
 // $font-size-smallest:      ceil(($font-size-base * 0.62)) !default; // ~10px
 
-$font-size-base:          14px !default;
+// $font-size-base:          14px !default;
 // $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 // $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
@@ -86,7 +86,7 @@ $font-size-base:          14px !default;
 // $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
 // $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
 // $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5:            $font-size-base !default;
+// $font-size-h5:            $font-size-base !default;
 // $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
@@ -95,8 +95,8 @@ $font-size-h5:            $font-size-base !default;
 // $line-height-computed   : floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    $font-family-sans-serif !default;
-$headings-font-weight:    800 !default;
+// $headings-font-family:    $font-family-sans-serif !default;
+// $headings-font-weight:    800 !default;
 // $headings-line-height   : 1.1 !default;
 // $headings-color:          $black !default;
 
@@ -392,8 +392,8 @@ $container-large-desktop  : 1200px;
 // $navbar-padding-vertical            : (($navbar-height - $line-height-computed) / 2) !default;
 // $navbar-collapse-max-height         : 340px !default;
 
-// $navbar-default-color               : #777 !default;
-// $navbar-default-bg                  : #f8f8f8 !default;
+$navbar-default-color               : #777 !default;
+$navbar-default-bg                  : $black !default;
 // $navbar-default-border              : darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links

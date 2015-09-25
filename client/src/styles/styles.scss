@@ -1,5 +1,8 @@
 @import "custom_variables";
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "flatly_variables";
 @import "bootstrap";
+@import "../../bower_components/bootswatch-sass/flatly/bootswatch";
 @import "glyphicons";
 @import "sprite";
 @import "layouts";
@@ -7,10 +10,11 @@
 
 // bower .scsss
 @import "../../bower_components/fontawesome/scss/font-awesome.scss";
-@import "../../bower_components/nsPopover/sass/ns-popover.scss";
+
+
 // module styles
-// @import '../app/modules/angular-d3-chart/src/chart/chart';
 
 // views
 @import '../app/views/home/home';
-@import '../app/views/charts/charts';
+@import "../app/views/nav/nav";
+@import "../app/views/footer/footer";

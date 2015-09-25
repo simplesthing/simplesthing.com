@@ -3,21 +3,33 @@
 
 (function (window, angular, undefined) {
 
-  angular.module('simplesthing', ['ngLodash', 'ui.bootstrap', 'ui.router', 'ngSanitize', 'cgBusy', 'angularD3Miso']).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  angular.module('simplesthing', ['ngLodash', 'ui.bootstrap', 'ui.router', 'ngSanitize', 'cgBusy', 'duScroll']).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.when('', '/home');
 
     $stateProvider.state('home', {
       url: '/home',
       views: {
+        'nav': {
+          templateUrl: 'app/views/nav/navbar.html'
+        },
         'main': {
           templateUrl: 'app/views/home/home.html'
+        },
+        'footer': {
+          templateUrl: 'app/views/footer/footer.html'
         }
       }
-    }).state('charts', {
-      url: '/charts',
+    }).state('archive', {
+      url: '/archive',
       views: {
+        'nav': {
+          templateUrl: 'app/views/nav/navbar.html'
+        },
         'main': {
-          templateUrl: 'app/views/charts/charts.html'
+          templateUrl: 'app/views/archive/archive.html'
+        },
+        'footer': {
+          templateUrl: 'app/views/footer/footer.html'
         }
       }
     }).state('style', {
