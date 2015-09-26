@@ -17,7 +17,7 @@
     model.portfolio = [
      {
           id    : 'angularD3',
-          image : 'angular-d3.png',
+          image : 'dashboard.png',
           name  : 'Angular D3 miso',
           date  : '2015'
       },
@@ -40,17 +40,17 @@
           date  : '2014'
       },
       {
+          id    : 'nordstrom',
+          image : 'nordstrom.png',
+          name  : 'Nordstrom',
+           date  : '2012 - 2013'
+      },
+      {
           id    : 'disney',
           image : 'disney-chat.png',
           name  : 'Disney Interactive',
           date  : '2011 - 2012'
-      },
-      {
-          id    : 'wordpress',
-          image : 'wordpress.png',
-          name  : 'WordPress Themes',
-           date  : '2012 - 2015'
-      },
+      }
     ];
 
 
@@ -62,6 +62,16 @@
           $scope.cancel = function(){
             $modalInstance.dismiss('cancel');
           }
+          $scope.interval = 4000;
+          $scope.noWrapSlides = false;
+          $scope.nordSlides = [
+            {image: 'images/portfolio/nordstrom/thread.png'},
+            {image: 'images/portfolio/nordstrom/wedding.png'},
+            {image: 'images/portfolio/nordstrom/men.png'},
+            {image: 'images/portfolio/nordstrom/beauty.png'},
+            {image: 'images/portfolio/nordstrom/bp.png'},
+          ];
+
         },
         size: 'lg'
       });

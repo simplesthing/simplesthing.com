@@ -109,6 +109,15 @@ header {
       margin-bottom: 18px;
       color: $gray;
     }
+    .carousel-control {
+      color: $black;
+    }
+    .carousel-control.right, .carousel-control.left {
+      background: transparent;
+    }
+    .carousel-indicators {
+      display: none;
+    }
 }
 
 .portfolio-modal .modal-content h2 {
