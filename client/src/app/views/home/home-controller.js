@@ -1,6 +1,6 @@
 'use strict';
 (function(window, angular, undefined) {
-  function HomeController($document){
+  function HomeController($document, $modal){
     let model = this;
 
     model.blogCollapse       = true;
@@ -29,7 +29,7 @@
       },
       {
           id    : 'amazon',
-          image : 'amazon-widgets.png',
+          image : 'amazon.png',
           name  : 'Amazon Widgets',
           date  : '2013 - 2014'
       },
@@ -46,21 +46,31 @@
           date  : '2011 - 2012'
       },
       {
-          id    : 'abby',
+          id    : 'wordpress',
           image : 'wordpress.png',
           name  : 'WordPress Themes',
            date  : '2012 - 2015'
       },
     ];
 
+
     model.open = function(name){
-      console.log(name)
+      let modalInstance = $modal.open({
+        animation: false,
+        templateUrl: 'app/views/home/portfolio/'+name+'.html',
+        controller: function($scope, $modalInstance){
+          $scope.cancel = function(){
+            $modalInstance.dismiss('cancel');
+          }
+        },
+        size: 'lg'
+      });
     };
 
   }
 
 
-  HomeController.$inject = ['$document'];
+  HomeController.$inject = ['$document', '$modal'];
 
   angular.module('simplesthing')
   .controller('HomeController', HomeController);

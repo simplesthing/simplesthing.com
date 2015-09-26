@@ -150,6 +150,12 @@ hr.star-primary:after {
 .mega-octicon { font-size: 32px; }
 .octicon-mark-github:before { content: '\f00a'} /*  */
 
+
+.modal-dialog {
+  width: auto;
+  margin: 0;
+}
+
 // // for style guide
 
 div.colors dt {
