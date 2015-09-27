@@ -211,3 +211,22 @@ header {
   width: 80%;
   margin: 0 auto;
 }
+
+.iframe-container {
+  position: relative;
+  width: 550px;
+  height: 680px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 0;
+  span {
+    margin: 25% auto;
+    display: inline-block;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}

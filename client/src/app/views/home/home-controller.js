@@ -87,7 +87,7 @@
       height: 0.5,
       update: function(config){
         model.chart = angular.extend(config, model[config.selected]);
-        model.chart.data = data[config.selected]
+        model.chart.data = data[config.selected];
       }
     };
 
