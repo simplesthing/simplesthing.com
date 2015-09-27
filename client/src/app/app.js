@@ -1,6 +1,4 @@
-
 'use strict';
-
 (function(window, angular, undefined) {
 
   angular.module('simplesthing', [
@@ -9,12 +7,13 @@
     'ui.router',
     'ngSanitize',
     'cgBusy',
-    'duScroll'
+    'duScroll',
+    'angularD3Miso'
   ])
   .config([ '$stateProvider','$urlRouterProvider', '$locationProvider',
     function($stateProvider, $urlRouterProvider, $locationProvider){
       // $urlRouterProvider.when('', '/home');
-      $urlRouterProvider.otherwise("/home");
+      $urlRouterProvider.otherwise('/home');
 
       $stateProvider
         .state('home', {

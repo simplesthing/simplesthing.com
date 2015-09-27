@@ -1,3 +1,5 @@
+/* jshint ignore:start */
+
 /*!
  * classie - class helper functions
  * from bonzo https://github.com/ded/bonzo
@@ -8,8 +10,6 @@
  * classie.toggle( elem, 'my-class' )
  */
 
-/*jshint browser: true, strict: true, undef: true */
-/*global define: false */
 
 ( function( window ) {
 
@@ -78,3 +78,5 @@ if ( typeof define === 'function' && define.amd ) {
 }
 
 })( window );
+
+/* jshint ignore:end */

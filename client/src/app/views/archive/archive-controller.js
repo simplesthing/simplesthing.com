@@ -1,10 +1,12 @@
+'use strict';
+
 (function(window, angular, undefined){
-  function Archive(){
+  function Archive(ExampleDataService){
 
   }
 
-  Archive.$inject = [];
+  Archive.$inject = ['ExampleDataService'];
 
   angular.module('simplesthing')
-  .controller('Archive', Archive);
+  .controller('ArchiveController', Archive);
 })(window, window.angular);

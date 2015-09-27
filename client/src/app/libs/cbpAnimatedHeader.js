@@ -1,3 +1,6 @@
+/* jshint ignore:start */
+
+
 /**
  * cbpAnimatedHeader.js v1.0.0
  * http://www.codrops.com
@@ -42,3 +45,4 @@ var cbpAnimatedHeader = (function() {
 	init();
 
 })();
+/* jshint ignore:end */

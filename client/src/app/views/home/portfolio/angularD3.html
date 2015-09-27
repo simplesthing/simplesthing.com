@@ -12,22 +12,27 @@
                     <div class="modal-body">
                         <h2>Angular D3 miso</h2>
                         <hr class="star-primary">
-                        <img src="images/portfolio/angular-d3.png" class="img-responsive img-centered" alt="">
+                        <div class="chart-container">
+                          <d3-chart id="top-10" config="chart">
+                            <chart-header></chart-header>
+                            <horizontal-bar></horizontal-bar>
+                            <chart-footer></chart-footer>
+                          </d3-chart>
+                        </div>
+                        <span class="caption">angular-d3-miso</span>
                         <p>
-
+                          While architecting the front end of an internal analytics application at Apollo, I came up with a pattern to build composable, reusable charts using Angular, D3 and the miso d3.chart library. This pattern is interesting is because both Angular and D3 have their own DOM updating cycles which do not play well with one another out of the box. The pattern takes advantage of Angular to create self contained configurable directives that manage DOM manipulations and data retrieval while relying on the miso d3.chart library for drawing and updating the D3 visualizations in a structured and modular way. <!-- Below are some screenshots of how this pattern was used to create a dashboard. -->
                         </p>
+                       <!--  <img src="images/portfolio/dashboard/overview.png" class="img-responsive img-centered" alt="Dashboard Modules">
+                        <span class="caption">Dashboard Modules</span>
+                        <img src="images/portfolio/dashboard/dashboard.png" class="img-responsive img-centered" alt="Dashboard Modules">
+                        <span class="caption">Dashboard Modules</span> -->
                         <ul class="list-inline item-details">
-                            <li>Client:
-                                <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                </strong>
-                            </li>
                             <li>Date:
-                                <strong><a href="http://startbootstrap.com">April 2014</a>
-                                </strong>
+                                <strong>2015</strong>
                             </li>
-                            <li>Service:
-                                <strong><a href="http://startbootstrap.com">Web Development</a>
-                                </strong>
+                            <li>See Code on Github:
+                              <strong><a href="https://github.com/simplesthing/angular-d3-miso">angular-d3-miso</a></strong>
                             </li>
                         </ul>
                         <button type="button" class="btn btn-primary" ng-click="cancel()"><i class="fa fa-times"></i> Close</button>

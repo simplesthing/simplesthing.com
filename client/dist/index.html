@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Personal website for web developer Ava Collins">
-  <meta name="viewport" content="width=device-width">
-  <title>Ava Collins | Web Developer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal website for JavaScript developer Ava Collins">
+    <meta name="author" content="Ava Collins">
 
-  <!-- bower:css -->
-  <!-- endbower -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:700,300,600,400" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+    <title>Ava Collins | Web Developer</title>
 
-  <!-- inject:css -->
-  <link rel="stylesheet" href="vendor/vendor-b5be265ec3.css">
-  <link rel="stylesheet" href="styles/styles-a95688eff9.css">
-  <!-- endinject -->
+    <!-- bower:css -->
+    <!-- endbower -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="vendor/vendor-2502cef322.css">
+    <link rel="stylesheet" href="styles/freelancer.css">
+    <link rel="stylesheet" href="styles/styles-f80a336e25.css">
+    <!-- endinject -->
+
+
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
+<body id="page-top" class="index" ng-app="simplesthing">
 
-<body ng-app="simplesthing">
-  <!-- bower:js -->
-  <!-- endbower -->
-  <!-- inject:js -->
-  <script src="vendor/vendor-9e4e8e7393.js"></script>
-  <script src="app/app-db729677e5.js"></script>
-  <script src="app/templateCache-284554d5e3.js"></script>
-  <!-- endinject -->
-  <div ui-view="main"></div>
+    <div ui-view="nav"></div>
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- inject:js -->
+    <script src="vendor/vendor-838c933740.js"></script>
+    <script src="app/app-913f6fe810.js"></script>
+    <script src="app/templateCache-11354bc1ee.js"></script>
+    <!-- endinject -->
+
+    <div ui-view="main"></div>
+
+    <div ui-view="footer"></div>
+
 </body>
+
 </html>

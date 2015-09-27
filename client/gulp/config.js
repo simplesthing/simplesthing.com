@@ -18,18 +18,21 @@ var defaultConfig = {
     appjs        : [
       'src/**/*.js',
       '!src/app/**/*.spec.js',
-      '!src/app/**/*.mock.js'
+      '!src/app/**/*.mock.js',
+      '!src/app/images/**/*.js'
     ],
     gulpjs       : ['gulpfile.js', './gulp/**/*.js'],
     sass         : ['src/styles/styles.scss'],
     images       : ['src/images/**/*.*', '!src/images/sprites/*.*'],
     assets       : [
+      'src/app/libs/basic-color-picker/basic-color-picker.html',
       'src/**/*.*',
       '!src/images/sprites/*.*',
       '!src/app/**/*.html',
       '!src/index.html',
       '!src/**/*.scss',
       '!src/**/*.js',
+
     ],
     fonts        : ['./bower_components/fontawesome/fonts/**/*.*', './bower_components/bootstrap-sass-official/assets/fonts/**/*.*'],
     sprites      : 'src/images/sprites/**/*.{png,jpg,gif}',
@@ -49,7 +52,7 @@ var defaultConfig = {
     },
     jshint        : '.jshintrc',
     htmlhint      : '.htmlhintrc',
-    htmlTemplates  : ['src/app/**/*.html', '!src/index.html' ],
+    htmlTemplates  : ['src/app/**/*.html', '!src/index.html', '!src/app/libs/**/*.html'],
     templateCache : {
       module  : 'simplesthing',
       root    : 'app'
