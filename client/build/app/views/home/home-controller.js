@@ -46,6 +46,11 @@
       date: '2011 - 2012'
     }];
 
+    var data;
+    ExampleDataService.people().then(function (response) {
+      data = response.data;
+    });
+
     model.people = {
       title: '10 Influential People Who Never Existed',
       footnote: 'Data examples were obtained from <a href="http://listverse.com/2008/11/03/top-10-influential-people-who-never-lived/" target="_blank">listverse.com</a>',
@@ -70,6 +75,7 @@
       selected: 'people',
       width: 1,
       height: 0.5,
+      data: data,
       update: function update(config) {
         model.chart = angular.extend(config, model[config.selected]);
         ExampleDataService[config.selected]().then(function (response) {
