@@ -46,9 +46,12 @@
       date: '2011 - 2012'
     }];
 
-    var data;
+    var data = {};
     ExampleDataService.people().then(function (response) {
-      data = response.data;
+      data.people = response.data;
+    });
+    ExampleDataService.animals().then(function (response) {
+      data.animals = response.data;
     });
 
     model.people = {
@@ -75,12 +78,9 @@
       selected: 'people',
       width: 1,
       height: 0.5,
-      data: data,
       update: function update(config) {
         model.chart = angular.extend(config, model[config.selected]);
-        ExampleDataService[config.selected]().then(function (response) {
-          model.chart.data = response.data;
-        });
+        model.chart.data = data[config.selected];
       }
     };
 
