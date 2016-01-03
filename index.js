@@ -1,5 +1,4 @@
 var express = require('express')
-  , http = require('http')
   , config = require('./configuration');
 // comment
 var app = express();
