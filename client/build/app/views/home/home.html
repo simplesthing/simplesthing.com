@@ -39,7 +39,7 @@
 
           <p>Lastly the issue with asynchronous data fetching for components on the server, for example your component is calling to a service to get data to populate a grid of items to be rendered to the page, where should this happen on the server or in your component? If it is left solely to the component chances are your server will render an empty view. There are many ways to solve this, most popular examples I saw were using either a server side implementation for fetching service data or a custom promise handler that would be aware of the components asynchronous methods. I tried a few awkward implementations before I found <a href="https://www.npmjs.com/package/redux-universal">Redux Universal</a> which will catch any promise returned in your component. Setup is minimal, you determine if you are calling your components on the server and you use this middleware to configure your store instead of plain Redux, this will enhance the store with an additional method called <code>renderUniversal</code> and you use this to render component on the server and this function will return a promise when all component promises are either resolved or rejected, preventing premature rendering to string without data.</p>
 
-          <p>Overall I enjoy the change to React and I look forward to solving some of the most challenging problems that making a large web application can present, and I hope that it feels more organized and sane as it grows.</p>
+
         </div>
       </div>
     </div>
