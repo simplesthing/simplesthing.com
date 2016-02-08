@@ -7,7 +7,7 @@
                   <div class="intro-text">
                       <span class="name">Ava Collins</span>
                       <hr class="star-light">
-                      <span class="skills">Empath, Ally, Web Developer, Imperfect Human</span>
+                      <span class="skills">Web Developer, Imperfect Human</span>
                   </div>
               </div>
           </div>
@@ -19,44 +19,28 @@
     <div class="container one-col">
       <div class="row">
         <div class="col text-center">
-          <h2>New year, new job</h2>
+          <h2>First Experience with React and Isomorphic Rendering</h2>
         </div>
       </div>
       <div class="row">
         <div class="col post">
-          <!-- blurb -->
-          <!--<div ng-class="{'blurb': home.blogCollapse}">-->
-            <em>published on January 2, 2016</em>
-            <p>
-              The past year was bittersweet, I grew professionally and personally, experienced great joys and deep pains, sometimes simultaneously.
-              I attended a bunch of great conferences (<a
-              href="http://forwardjs.com/">Forward 2</a>, <a href="http://presspublish.events/">Press Publish</a>, <a
-              href="http://opensourcebridge.org/">Open Source Bridge</a>, <a href="http://www.alterconf.com/">AlterConf</a> <a href="http://2015.cascadiajs.com/">CascadiaFest</a>,
-              <a href="http://osfeels.com/">Open Source &amp; Feelings</a> ) met a ton of awesome people, I started a <a
-              href="http://www.meetup.com/Seattle-Ladies-JS/">meetup group</a>, met more awesome people, I gave  my first technical talk at
-              <a href="http://www.meetup.com/seattlejs/">Seattle JS</a> in front of supportive awesome people and I quit my job without a another job lined up.
-            </p>
-            <!--<div ng-class="{'text-fade' : home.blogCollapse}"></div>-->
-          <!--</div>-->
-          <!-- collapsed-->
-          <!--collapse="home.blogCollapse"-->
-          <!--<div >-->
+          <em>published on January 2, 2016</em>
+          <p>I finally got a chance to leave the "Angular Way" for a while, and start "Thinking in React". The basic concept to grok with React is composability, making self contained components that don't mutate the application state and use props to pass in data and functions. React is a view library, not a framework. Each component is a simple state machine in itself and if you begin to wire them together into something more complex you will most likely need a <em>'store'</em> to manage state across the components. </p>
 
+          <p>React is unopinionated, even if the community is not, and you could very well write your own Observer pattern type helper that manages registering components and listening for changes and responding with actions. This is the basic idea behind <a href="https://facebook.github.io/flux/docs/overview.html" target="_blank">Facebook's Flux</a> architecture, where there is a 'dispatcher', 'stores' and 'components' to facilitate an update cycle that pushes data down a unidirectional path when state changes occur. <a href="https://github.com/rackt/redux">Redux</a> takes the Flux pattern one step further by introducing a functional JavaScript style and only allowing for a single state object to represent the applications, where Flux could have multiple stores, Redux has only one.</p>
 
+          <p>Routing is another thing that you could craft your own or choose from the various, often framework agnostic, routers out there. I went with the <a href="https://github.com/rackt/react-router/tree/master/docs">React Router</a> and additionally layering the <a href="https://github.com/rackt/react-router-redux">React Router Redux</a> on top in order to save the routing information in the single application state object.</p>
 
+          <p>Another optional but highly recommended library to use with React is <a href="https://webpack.github.io/">Webpack</a>, a module bundler that will bundle your application files together and handle dependencies. It can also replace gulp in your workflow by adding 'loaders' which can pre or post process files to be bundled in order to transpile ES6 to ES2015, compile SASS to CSS, inline images as MD5 hashes, etc etc. Webpack offers a development web server, and middleware that you can integrate into your own server, in order to facilitate <em>'Hot Module Replacement'</em>, a feature to inject updated modules into the active runtime, "It’s like LiveReload for every module.".</p>
 
-           <p>I had originally written a blog posting about my decision to look for a new job, but after
-           a nights sleep on it I decided to redact it. I'd rather just say that
-             I am super excited to start my new job at <a href="http://www.lindenlab.com/">Linden Lab</a>, and that they have already blown me away with the company policy concerning fair pay.
-              I'm equally excited to say that the product I will be supporting is one that I have been envisioning since I was doing 3D development in college, Virtual Reality worlds, finally! In their own words,
-              <em>"Project Sansar is the codename of our new platform for user-created virtual experiences. Sansar will democratize VR as a creative medium and make it easy for people to create, share, and profit from social virtual experiences."</em>
-              I couldn't be more invigorated and ready to start 2016, I have more drive and motivation now than ever as I look forward to coding, blogging, meetups and conferencing, I hope to see you around, IRL or online.
-            </p>
-          <!--</div>-->
+          <p>And finally the isomorphic bits, almost every tutorial or video will proclaim <em>it's sooo easy</em>! To some extend this is true, you can easily render a React component on the server by using React DOM's <code>renderToString</code> function and return that from, a presumably Express, server middleware. What most tutorials will gloss over is how to setup your development environment to work with webpack's CSS bundling on the server, or how to implement promise handling on the server. Just like any challenge withing the application you can choose to roll your own, or look to an existing implementation.</p>
+
+          <p>In the case of CSS the issue is that on the server you cannot use webpack's bundling feature to require, and process, SASS/CSS files since you will not be running files through webpack for server side render. On the server you will be serving plain JavaScript modules, and if you are using <code>var styles = require('./styles.css');</code> to import styles into your component you will receive and error for an unexpected token in your module, which is acually not a JavaScript module at all but really a CSS file. You can write a conditional in your file to only import if some environment variable is present but you still have to figure out how to include the CSS server side, and if you are using CSS modules how are you going to sync up the correct class names? Luckily there are a set of tools called <a href="https://github.com/halt-hammerzeit/webpack-isomorphic-tools">Webpack Isomorphic Tools</a> which will handle the imports for you on server side by creating an JSON file for all the compiled, or webpacked, application assets upon running a production build. Then on the server before booting up you add these tools which will map the assets JSON to the server render components. There is a bit of configuration involved in getting this approach to work, you have to make a separate webpack config for production and development, but I found it to be worth it since these tools also you have you covered during development with HMR <em>(hot module replacement)</em> updates to styles.</p>
+
+          <p>Lastly the issue with asynchronous data fetching for components on the server, for example your component is calling to a service to get data to populate a grid of items to be rendered to the page, where should this happen on the server or in your component? If it is left solely to the component chances are your server will render an empty view. There are many ways to solve this, most popular examples I saw were using either a server side implementation for fetching service data or a custom promise handler that would be aware of the components asynchronous methods. I tried a few awkward implementations before I found <a href="https://www.npmjs.com/package/redux-universal">Redux Universal</a> which will catch any promise returned in your component. Setup is minimal, you determine if you are calling your components on the server and you use this middleware to configure your store instead of plain Redux, this will enhance the store with an additional method called <code>renderUniversal</code> and you use this to render component on the server and this function will return a promise when all component promises are either resolved or rejected, preventing premature rendering to string without data.</p>
+
+          <p>Overall I enjoy the change to React and I look forward to solving some of the most challenging problems that making a large web application can present, and I hope that it feels more organized and sane as it grows.</p>
         </div>
-        <!--<div class="collapse-control">-->
-          <!--<a ng-click="home.toggleBlog()">{{home.blogCollapseStatus}}</a>-->
-        <!--</div>-->
       </div>
     </div>
   </section>
@@ -105,9 +89,9 @@
                <div class="row">
                  <div class="col">
                     <p>
-                      I have eight years of experience working on the front end and I've used nearly a dozen languages and frameworks while doing it, but the base three, HTML, CSS and JavaScript, are the ones I do best, with JavaScript being the most used in my daily work. I've spent the last two years working with Angular JS and most recently combining it with D3.
+                      I have eight years of experience working on the front end and I've used nearly a dozen languages and frameworks while doing it, but the base three, HTML, CSS and JavaScript, are the ones I do best, with JavaScript being the most used in my daily work. I've spent the last two years working with Angular JS and most recently combining it with D3. I am currently working on a React + Redux application at Linden Lab.
                     </p>
-                    <p>Involvement in community and critically thinking of ways to improve how we work with one another is just as important to me as writing code. Our products, and how we make them, affect our understanding of self and each other. Inclusion of all personas and the practice of empathy leads the way to making better products and a better world.
+                    <p>Involvement in community and critically thinking of ways to improve how we work with one another is just as important to me as writing code. Our products, and how we make them, affect our understanding of self and each other. Inclusion of all personas and the practice of empathy leads the way to making better products and a better world. I am interested in learning about and getting involved with community projects or events related to open web, open source software and geek feminism.
                     </p>
                  </div>
                </div>

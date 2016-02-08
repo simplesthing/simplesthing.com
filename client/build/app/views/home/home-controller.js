@@ -6,14 +6,6 @@
     model.blogCollapse = true;
     model.blogCollapseStatus = 'More';
 
-    model.toggleBlog = function () {
-      model.blogCollapse = !model.blogCollapse;
-      model.blogCollapseStatus = model.blogCollapse ? 'More' : 'Less';
-
-      var archive = angular.element(document.getElementById('blog'));
-      $document.scrollToElement(archive, 0, 500);
-    };
-
     model.portfolio = [{
       id: 'angularD3',
       image: 'angular-d3.png',

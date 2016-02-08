@@ -55,5 +55,6 @@
         "comment_status": "open",
         "custom_fields": {}
     },
-    "previous_url": "http://dev.local/blog/2015/03/03/forward2-web-technology-summit/"
+    "previous_url": "forward2-web-technology-summit",
+    "next_url":"new-year-new-job"
 }
