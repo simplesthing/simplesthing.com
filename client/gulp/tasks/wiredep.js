@@ -27,8 +27,8 @@ gulp.task('wiredep:dist', function(){
   config.log('Copying bower dependencies');
 
   var deps      = require('wiredep')();
-  var jsFilter  = $.filter('**/*.js');
-  var cssFilter = $.filter('**/*.css');
+  var jsFilter  = $.filter(['**/*.js'], {restore: true});
+  var cssFilter = $.filter(['**/*.css'], {restore: true});
 
   return  gulp
           .src(_.flatten([deps.js, deps.css]))
@@ -40,11 +40,11 @@ gulp.task('wiredep:dist', function(){
             // compress: false,
             preserveComments: $.uglifySaveLicense
           })).on('error', config.errorHandler('Uglify'))
-          .pipe(jsFilter.restore())
+          .pipe(jsFilter.restore)
           .pipe(cssFilter)
           .pipe($.concat('vendor.css'))
           .pipe($.csso()).on('error', config.errorHandler('CSSO'))
-          .pipe(cssFilter.restore())
+          .pipe(cssFilter.restore)
           .pipe($.rev())
           .pipe(gulp.dest(path.join(config.dist, '/vendor')));
 });

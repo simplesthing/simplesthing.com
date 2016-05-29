@@ -1,5 +1,4 @@
 // Generic layouts
-// Please use the http://careerprep.devint.aptimus.net:9000/#/layouts to check the sizing before changing these
 //--------------------------------------
 .one-col > .row > .col {
   @extend .col-xs-12;
@@ -15,7 +14,7 @@
 
 .three-col > .row > .col {
   @extend .col-xs-12;
-  @extend .col-sm-;
+  @extend .col-sm-6;
   @extend .col-md-4;
 }
 

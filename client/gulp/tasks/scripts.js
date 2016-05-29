@@ -44,7 +44,9 @@ gulp.task('scripts:dist', function(){
           .pipe($.jshint())
           .pipe($.jshint.reporter('jshint-stylish'))
           .pipe($.jshint.reporter('fail'))
-          .pipe($.babel())
+          .pipe($.babel({
+            presets: ['es2015']
+          }))
           .pipe($.ngAnnotate())
           .pipe($.if('*.miso.js', sort(function (a, b) {
                   if (a > b) {return 1;}

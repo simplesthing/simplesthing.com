@@ -1,7 +1,8 @@
 'use strict';
+
 (function (window, angular, undefined) {
   function HomeController($document, $modal, ExampleDataService) {
-    var model = this;
+    let model = this;
 
     model.blogCollapse = true;
     model.blogCollapseStatus = 'More';
@@ -38,7 +39,7 @@
       date: '2011 - 2012'
     }];
 
-    var data = {};
+    let data = {};
     ExampleDataService.people().then(function (response) {
       data.people = response.data;
     });
@@ -70,7 +71,7 @@
       selected: 'people',
       width: 1,
       height: 0.5,
-      update: function update(config) {
+      update: function (config) {
         model.chart = angular.extend(config, model[config.selected]);
         model.chart.data = data[config.selected];
       }
@@ -80,7 +81,7 @@
       $modal.open({
         animation: false,
         templateUrl: 'app/views/home/portfolio/' + name + '.html',
-        controller: function controller($scope, $modalInstance, chart) {
+        controller: function ($scope, $modalInstance, chart) {
           $scope.cancel = function () {
             $modalInstance.dismiss('cancel');
           };
@@ -91,7 +92,7 @@
         },
         size: 'lg',
         resolve: {
-          chart: function chart() {
+          chart: function () {
             return model.chart;
           }
         }

@@ -1,4 +1,5 @@
 'use strict';
+
 (function (window, angular, undefined) {
 
   angular.module('simplesthing', ['ngLodash', 'ui.bootstrap', 'ui.router', 'ngSanitize', 'cgBusy', 'duScroll', 'angularD3Miso']).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {

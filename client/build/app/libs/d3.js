@@ -1,4 +1,5 @@
 'use strict';
+
 (function (window, angular, undefined) {
 
   function d3() {
