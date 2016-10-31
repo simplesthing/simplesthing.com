@@ -8,6 +8,11 @@
     model.blogCollapseStatus = 'More';
 
     model.portfolio = [{
+      id: 'lindenlab',
+      image: 'lindenlab.png',
+      name: 'Linden Lab',
+      date: '2016 - present'
+    }, {
       id: 'angularD3',
       image: 'angular-d3.png',
       name: 'Angular D3 miso',
@@ -32,12 +37,15 @@
       image: 'nordstrom.png',
       name: 'Nordstrom',
       date: '2012 - 2013'
-    }, {
-      id: 'disney',
-      image: 'disney-chat.png',
-      name: 'Disney Interactive',
-      date: '2011 - 2012'
-    }];
+    }
+
+    // {
+    //     id    : 'disney',
+    //     image : 'disney-chat.png',
+    //     name  : 'Disney Interactive',
+    //     date  : '2011 - 2012'
+    // }
+    ];
 
     let data = {};
     ExampleDataService.people().then(function (response) {
