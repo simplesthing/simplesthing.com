@@ -1,28 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import styled, { createGlobalStyle } from 'styled-components'
+import globalStyle, { Wrapper } from './Style'
+import { CircusGradient } from './components/CircusGradient'
+import { Header } from './components/Header'
+import { Hero } from './components/Hero'
 
-
-const rootEl = document.getElementById('root');
-
+const rootEl = document.getElementById('root')
+ 
+const GlobalStyle = createGlobalStyle`${globalStyle}`
 
 const App = () => {
     return (
-        <div>
-            <h1 style={{ 'textAlign': 'center'}}> Hello World :) </h1>
-        </div>
-        );
-};
+          <CircusGradient>
+            <GlobalStyle />
+            <Wrapper>
+              <Header/>
+              <Hero />
+            </Wrapper>
+          </CircusGradient>
+        )
+}
 
 const renderApp = () => {
     ReactDOM.render(
         <App />, rootEl
-    );
+    )
 }
 
-renderApp();
+renderApp()
 
 
 // This checks for local changes and automatically refreshes the browser (hot-reloading)
 if (module.hot) {
-    module.hot.accept('./components/App.jsx', () => renderApp());
+    module.hot.accept('./components/App.jsx', () => renderApp())
 }

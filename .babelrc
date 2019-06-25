@@ -4,6 +4,12 @@
       "@babel/react",
     ],
     "plugins": [
+      ["babel-plugin-styled-components",
+        {
+          "displayName": false
+        }
+      ],
+      "polished",
       "@babel/plugin-syntax-dynamic-import",
       "@babel/plugin-proposal-class-properties",
       "@babel/plugin-proposal-export-namespace-from",
