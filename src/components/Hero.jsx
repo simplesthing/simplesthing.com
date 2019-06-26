@@ -10,6 +10,6 @@ const Wrapper = styled.div`
 
 export const Hero = () => (
 <Wrapper>
- <ProfilePicture/>
+
 </Wrapper>
 )

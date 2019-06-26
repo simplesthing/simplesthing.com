@@ -34,14 +34,16 @@ export const h4Size = `${ stripUnit(modularScale(2)) }rem`
 export const h5Size = `${ stripUnit(modularScale(1)) }rem`
 export const h6Size = `${ stripUnit(modularScale(0)) }rem`
 
-export const Wrapper = styled.div`
+export const Layout = styled.div`
   padding: ${marginBase};
-`
+display: flex;
+`;
 
 const globalStyle = `
   body {
     font-family: ${fontFamily};
     color: ${gray0};
+    background-color: ${base};
   }
   h1,h2,h3,h4,h5,h6 {
     font-family: ${headerFontFamily};

@@ -19,11 +19,11 @@ const ProfilePicture = styled.div`
 
 export const Header = () => {
   return (
-    <Fragment>
+    <div>
       <ProfilePicture />
       <H1>simplesthing</H1>
-      <span>ux developer, imperfect human</span>
-    </Fragment>
+      <span>ui developer, imperfect human</span>
+    </div>
   )
 }
 

@@ -6,7 +6,8 @@
     "plugins": [
       ["babel-plugin-styled-components",
         {
-          "displayName": false
+          "displayName": true,
+          "fileName": false
         }
       ],
       "polished",

@@ -17,8 +17,11 @@ import { base, step1 } from '../Style'
 */
 
 export const CircusGradient = styled.div`
-width: 100vw;
-height: 100vh;
+width: 100%;
+height: 100%;
+min-width: 100vw;
+min-height: 100vh;
+background-attachment fixed;
 background: conic-gradient(
   ${base} 0.05turn, 
   ${step1} 0.015turn 0.10turn,
