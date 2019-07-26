@@ -36,7 +36,6 @@ export const h6Size = `${ stripUnit(modularScale(0)) }rem`
 
 export const Layout = styled.div`
   padding: ${marginBase};
-display: flex;
 `;
 
 const globalStyle = `

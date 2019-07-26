@@ -16,6 +16,7 @@ const App = () => {
       <GlobalStyle />
       <Layout>
         <Header />
+        <Hero />
       </Layout>
     </CircusGradient>
   )
