@@ -5,7 +5,7 @@ import { h3Size } from '../Style'
 const H1 = styled.h1`
   font-size: ${h3Size};
   letter-spacing: 1px;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
 `
 
 const ProfilePicture = styled.div`

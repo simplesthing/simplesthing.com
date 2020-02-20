@@ -50,6 +50,10 @@ const globalStyle = `
   }
   h1 {
     font-size: ${h1Size};
+    margin: 1.5rem 0;
+  }
+  p {
+    line-height: 1.75;
   }
 `;
 
