@@ -14,8 +14,8 @@ const App = () => {
   return (
     <CircusGradient>
       <GlobalStyle />
+      <Header />
       <Layout>
-        <Header />
         <Hero />
       </Layout>
     </CircusGradient>

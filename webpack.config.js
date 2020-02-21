@@ -31,17 +31,28 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                exclude: /(node_modules)/,
-                use: ['babel-loader'], // we use this to transpile es6 code on the web
-              },
-              {
-                test: /\.css$/,
+            test: /\.(js|jsx)$/,
+            exclude: /(node_modules)/,
+            use: ['babel-loader'], // we use this to transpile es6 code on the web
+            },
+            {
+            test: /\.css$/,
+            use: [
+                MiniCssExtractPlugin.loader,
+                "css-loader", "postcss-loader",
+                ]
+            },
+            {
+                test: /\.(png|jpg|gif)$/i,
                 use: [
-                  MiniCssExtractPlugin.loader,
-                  "css-loader", "postcss-loader",
-                  ],
-                },
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192,
+                        }
+                    }
+                ]
+            }
         ]
     },
     plugins: [
