@@ -122,7 +122,7 @@ const SocialLink = styled.a`
   border-radius: 100%;
   text-align: center;
   font-size: 20px;
-  line-height: 45px;
+  line-height: 50px;
   margin-top: 15px;
   font-size: 20px;
   color: #fff;

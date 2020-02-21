@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components'
-import { h3Size, logoFontFamily, mqMedium } from '../Style'
+import { logoFontFamily, mqMedium, mqXlarge } from '../Style'
 
 const H1 = styled.header`
   font-family: ${logoFontFamily};
@@ -11,6 +11,9 @@ const H1 = styled.header`
   margin: 2% 2% 0;
   @media ${mqMedium} {
     font-size: 10vw;
+  }
+  @media ${mqXlarge} {
+    font-size: 8vw;
   }
 `
 
