@@ -37,13 +37,13 @@ export const h4Size = `${ stripUnit(modularScale(2)) }rem`
 export const h5Size = `${ stripUnit(modularScale(1)) }rem`
 export const h6Size = `${ stripUnit(modularScale(0)) }rem`
 
-
 export const bpSmall = '48em'; // 768px
 export const bpMedium = '64em'; //1024px * 768px
 export const bpLarge = '85.375em'; // 1366px * 768px
 export const bpXlarge = '120em'; // 1920px * 1080px
 export const bp4k = '160em' //2560px * 1440px
 
+export const mqXsmall = '(min-width: 300px)';
 export const mqSmall = `(min-width: ${bpSmall})`;
 export const mqMedium = `(min-width: ${bpMedium})`;
 export const mqLarge = `(min-width: ${bpLarge})`;
@@ -54,7 +54,11 @@ export const mqRetina = '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 1
 export const marginBase = '4%'
 
 export const Layout = styled.div`
-  margin: 0 4%;
+  height: 100%;
+  margin: 0 2%;
+  @media ${mqSmall} {
+    margin: 0 4%;
+  }
   @media ${mqMedium} {
     margin: 0 8%;
   }
@@ -68,13 +72,6 @@ export const Layout = styled.div`
     margin: 0 18%;
   }
 `;
-
-export const Grid = styled.div`
-  display: grid;
-  grid-gap: ${marginBase} ${marginBase};
-  margin-bottom: ${marginBase};
-  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-`
 
 const globalStyle = `
   body {
@@ -108,6 +105,8 @@ const globalStyle = `
   }
   h1 {
     font-size: ${h1Size};
+    @media ${mqMedium} {
+    }
   }
   h2 {
     font-size: ${h2Size};
