@@ -13,7 +13,7 @@ const H1 = styled.header`
     font-size: 10vw;
   }
   @media ${mqXlarge} {
-    font-size: 8vw;
+    font-size: 9vw;
   }
 `
 
