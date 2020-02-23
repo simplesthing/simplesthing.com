@@ -47,7 +47,6 @@ export const Grid = styled.div`
         grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     }
     @media ${mqXlarge} {
-     
         grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     }
 `
@@ -61,27 +60,21 @@ export const Item = styled.div`
     border: solid 4px #fff;
     border-radius: 20px;
     margin: 2%;
-    &:nth-child(1){
-        margin-top: 0;
-    }
-    &:nth-child(2){
-        margin-top: 0;
-    }
     @media ${mqXsmall} {
-    height: 325px;
+        height: 325px;
     }
     @media ${mqSmall} {
-    height: 255px;
+        height: 255px;
     }
     @media ${mqMedium} {
-    height: 375px;
+        height: 375px;
     }
     @media ${mqXlarge} {
-    height: 433px;
+        height: 433px;
     }
 `
 
-export const TextBg = styled.div`
+export const TintedGlass = styled.div`
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -92,16 +85,36 @@ export const TextBg = styled.div`
     border-width: 2px 0 0 0;
 `
 
+export const InfoContainer = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+`
+
+export const InfoTitle = styled.div`
+    flex: 0 1 auto;
+`
 export const Title = styled.h2`
-    position: absolute;
-    bottom: 0;
+    display: inline;
+    position: relative;
+    top: 1.5rem;
+    left: 1.5rem;
     font-size: ${h4Size};
     font-family: ${fontFamily};
     color: #fff;
-    margin: 4%;
-    span {
-    font-size: .85rem;
-    }
+`
+
+export const InfoIcons = styled.div`
+    flex: 01 auto;
+    text-align: right;
+    margin-right: 1.5rem;
+`
+export const Icon = styled.img`
+    position: relative;
+    top: 1.1rem;
+    margin-left:.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    
 `
 
 export const Contacts = styled.ul`
