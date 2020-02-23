@@ -3,13 +3,16 @@ import {
     h1Size, 
     h2Size, 
     h3Size, 
-    h4Size, 
+    h4Size,
+    h5Size,
+    h6Size,
     accent1, 
     mqXsmall, 
     mqSmall, 
     mqMedium, 
     mqLarge, 
-    mqXlarge, 
+    mqXlarge,
+    mqXxlarge,
     fontFamily, 
     marginBase } from '../../Style'
 
@@ -34,20 +37,24 @@ export const Grid = styled.div`
     display: grid;
     margin-left: -1%;
     margin-right: -1%;
-    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    @media ${mqXsmall} {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
     @media ${mqSmall} {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
     }
     @media ${mqMedium} {
-     
-    grid-template-columns: repeat(auto-fill, minmax(425px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
     }
     @media ${mqLarge} {
-        
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     }
     @media ${mqXlarge} {
-        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
+    }
+    @media ${mqXxlarge} {
+        grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
     }
 `
   
@@ -92,13 +99,21 @@ export const InfoContainer = styled.div`
 
 export const InfoTitle = styled.div`
     flex: 0 1 auto;
+    margin: 1rem 0 1rem 1rem;
+    @media ${mqSmall} {
+        margin-top: 1.1rem;
+    }
+    @media ${mqMedium} {
+        margin-top: 1.25rem;
+    }
+    @media ${mqXlarge} {
+        margin-top: 1.75rem;
+    }
 `
 export const Title = styled.h2`
     display: inline;
     position: relative;
-    top: 1.5rem;
-    left: 1.5rem;
-    font-size: ${h4Size};
+    font-size: ${h5Size};
     font-family: ${fontFamily};
     color: #fff;
 `
@@ -106,15 +121,28 @@ export const Title = styled.h2`
 export const InfoIcons = styled.div`
     flex: 01 auto;
     text-align: right;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
 `
 export const Icon = styled.img`
     position: relative;
     top: 1.1rem;
     margin-left:.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    
+    width: 1.5rem;
+    height: 1.5rem;
+    @media ${mqSmall} {
+        width: 2rem;
+        height: 2rem;
+        top: .75rem;
+        height: 2rem;
+    }
+    @media ${mqMedium} {
+        top: 1rem;
+    }
+    @media ${mqXlarge} {
+        width: 2.5rem
+        height: 2.5rem;
+        top: 1.1rem;
+    }
 `
 
 export const Contacts = styled.ul`

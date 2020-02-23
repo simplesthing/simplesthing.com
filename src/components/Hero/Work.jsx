@@ -45,7 +45,7 @@ export const Work = () => (
             <TintedGlass>
                 <InfoContainer>
                     <InfoTitle>
-                        <Title>Scripting Office Hours</Title>
+                        <Title>Office Hours</Title>
                     </InfoTitle>
                     <InfoIcons>
                         <Icon src="https://simplesthings.s3-us-west-2.amazonaws.com/c%23100x.png" alt="C#" title="C#" />
@@ -73,7 +73,7 @@ export const Work = () => (
             <TintedGlass>
                 <InfoContainer>
                     <InfoTitle>
-                        <Title>Career Bootcamp</Title>
+                        <Title>Bootcamp</Title>
                     </InfoTitle>
                     <InfoIcons>
                         <Icon src="https://simplesthings.s3-us-west-2.amazonaws.com/angularLogo100x.png" alt="Angular" title="Angular" />
