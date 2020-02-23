@@ -1,2 +1,0 @@
-# simplesthing.com
-Personal site.

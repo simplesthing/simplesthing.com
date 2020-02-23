@@ -1,0 +1,19 @@
+{
+    "presets": [
+      "@babel/env",
+      "@babel/react",
+    ],
+    "plugins": [
+      ["babel-plugin-styled-components",
+        {
+          "displayName": true,
+          "fileName": false
+        }
+      ],
+      "polished",
+      "@babel/plugin-syntax-dynamic-import",
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-export-namespace-from",
+      "@babel/plugin-proposal-throw-expressions"
+    ]
+}
