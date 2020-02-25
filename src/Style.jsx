@@ -23,8 +23,8 @@ export const linkColor         = `${accent2}`;
 export const linkHoverColor = darken(.15, linkColor);
 
 export const logoFontFamily = 'Modak';
-export const fontFamily   = `'Raleway', sans-serif`;
-export const headerFontFamily   = `'Sansita', sans-serif`;
+export const fontFamily   = 'Raleway';
+export const headerFontFamily   = 'Sansita';
 
 export const fontSizeBase = '16px';
 export const fontLineHeightBase = '1.5';

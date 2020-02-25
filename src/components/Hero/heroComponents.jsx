@@ -22,6 +22,10 @@ export const Wrapper = styled.div`
     display: block;
     height: 100%;
     width: 100%;
+    p, h1 {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
     h1 {
         font-size: ${h3Size};
         @media ${mqMedium} {
@@ -31,14 +35,29 @@ export const Wrapper = styled.div`
             font-size: ${h1Size};
         }
     }
+    @media ${mqSmall} {
+        p, h1 {
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+    }
+    @media ${mqMedium} {
+        p, h1 {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    
 `
 
 export const Grid = styled.div`
     display: grid;
-    margin-left: -1%;
-    margin-right: -1%;
+    margin-left: 1%;
+    margin-right: 1%;
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     @media ${mqXsmall} {
+        margin-left: -1%;
+        margin-right: -1%;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
     @media ${mqSmall} {
@@ -66,14 +85,16 @@ export const Item = styled.div`
     background-repeat: no-repeat;
     border: solid 4px #fff;
     border-radius: 20px;
-    margin: 2%;
+    margin: 4% 3%;
     @media ${mqXsmall} {
+        margin: 4%;
         height: 325px;
     }
-    @media ${mqSmall} {
+    @media ${mqSmall} {    
         height: 255px;
     }
     @media ${mqMedium} {
+        margin: 2%;
         height: 375px;
     }
     @media ${mqXlarge} {
