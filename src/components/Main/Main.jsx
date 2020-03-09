@@ -3,10 +3,10 @@ import {
     Wrapper,
     Contacts,
     SocialLink
-} from './heroComponents'
+} from './mainComponents'
 import { Work } from './Work'
 
-export const Hero = () => (
+export const Main = () => (
 <Wrapper>
     <h1 style={{marginTop: '1rem'}}>work</h1>
     <Work/>
@@ -18,7 +18,7 @@ export const Hero = () => (
     My ideal work life includes thoughtful decisions being made on behalf of the end user, time to learn as well as time to share with others, the ability to fill 
     spaces in the product that are outside the normal purview of a job title and an equitable environment in which to contribute and be heard. 
     I’ve spent the last year working fulltime in C++ and WPF while learning the Sansar C# scripting API in my freetime. 
-    I am currently most interested in using React Native for Windows to create a universal UI framework for a brand across multiple platforms.</p>
+    I am currently most interested in using React Native for Windows to build cross platform gaming UI.</p>
     <h1>contact</h1>
     <Contacts>
       <li>

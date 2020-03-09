@@ -15,6 +15,7 @@ const H1 = styled.header`
     @media ${mqMedium} {
       font-size: 10vw;
     }
+    
     @media ${mqXlarge} {
       font-size: 9vw;
     }

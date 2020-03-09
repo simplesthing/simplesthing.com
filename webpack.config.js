@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-// HtmlWebpackPlugin is used to inject our created bundles into this html file so // we need to create it.
+// HtmlWebpackPlugin is used to inject our created bundles into this html file so we need to create it.
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: './src/index.html',
     filename: 'index.html',
@@ -63,5 +63,5 @@ module.exports = {
         HtmlWebpackPluginConfig,
         new webpack.NoEmitOnErrorsPlugin(),
     ],
-    mode: 'development',
+    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 }

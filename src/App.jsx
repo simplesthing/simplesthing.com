@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 import globalStyle, { Layout } from './Style'
 import { CircusGradient } from './components/CircusGradient'
 import { Header } from './components/Header'
-import { Hero } from './components/Hero/Hero'
+import { Main } from './components/Main/Main'
 
 const rootEl = document.getElementById('root')
  
@@ -16,7 +16,7 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Layout>
-        <Hero />
+        <Main />
       </Layout>
     </CircusGradient>
   )
