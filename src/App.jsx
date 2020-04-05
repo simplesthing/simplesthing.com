@@ -5,22 +5,42 @@ import globalStyle, { Layout } from './Style'
 import { CircusGradient } from './components/CircusGradient'
 import { Header } from './components/Header'
 import { Main } from './components/Main/Main'
+import { ThemeProvider } from './contexts/theme'
 
 const rootEl = document.getElementById('root')
  
 const GlobalStyle = createGlobalStyle`${globalStyle}`
 
-const App = () => {
-  return (
-    <CircusGradient>
-      <GlobalStyle />
-      <Header />
-      <Layout>
-        <Main />
-      </Layout>
-    </CircusGradient>
-  )
+class App extends React.Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      theme: 'dark',
+      toggleTheme: () => {
+        this.setState(({ theme }) => ({
+          theme: theme === 'dark' ? 'light' : 'dark'
+        }))
+      }
+    }
+
+  }
+
+  render() {
+    return (
+      <ThemeProvider value={this.state}>
+        <CircusGradient className={this.state.theme}>
+        <GlobalStyle />
+          <Header />
+          <Layout>
+            <Main />
+          </Layout>
+        </CircusGradient>
+      </ThemeProvider>
+    )
+  }
 }
+
 
 const renderApp = () => {
     ReactDOM.render(

@@ -1,8 +1,12 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components'
 import { logoFontFamily, mqMedium, mqXlarge, mqSmall, mqXsmall } from '../Style'
+import ThemeToggle from './ThemeToggle'
 
-const H1 = styled.header`
+
+export const Header = ({theme}) => {
+
+  const H1 = styled.header`
   text-align: center;
   margin-top: 10%;
   h1 {
@@ -31,9 +35,11 @@ const H1 = styled.header`
  
 `
 
-export const Header = () => {
   return (
-    <H1><h1>simplesthing</h1></H1>
+    <Fragment>
+      <H1><h1>simplesthing</h1></H1>
+      <ThemeToggle />
+    </Fragment>
   )
 }
 

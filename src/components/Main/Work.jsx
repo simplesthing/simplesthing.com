@@ -88,7 +88,7 @@ export const Work = () => {
     return (
         <Grid>
             {items.map( item => (
-                <Item background={item.background} key={Math.random()}>
+                <Item backgroud={item.background} key={Math.random()}>
                     <TintedGlass>
                         <InfoContainer>
                             <InfoTitle>
@@ -96,7 +96,7 @@ export const Work = () => {
                             </InfoTitle>
                             <InfoIcons>
                                 {item.icons.map( icon =>(
-                                    <Icon src={icon.url} title={icon.title} alt={icon.title} />
+                                    <Icon src={icon.url} title={icon.title} alt={icon.title} key={Math.random()} />
                                 ))}
                             </InfoIcons>     
                         </InfoContainer>

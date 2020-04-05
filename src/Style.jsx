@@ -71,8 +71,8 @@ export const Layout = styled.div`
   @media ${mqXxlarge} {
     margin: 0 18%;
   }
-`;
-
+  `;
+    
 const globalStyle = `
   body {
     background-color: ${base};
@@ -125,5 +125,13 @@ const globalStyle = `
   }
 `;
 
+
+
+
 export default globalStyle;
+
+/** THEME STYLES */
+
+export const flashlight_black = 'https://simplesthings.s3-us-west-2.amazonaws.com/flashlight_black.png'
+export const flashlight_white = 'https://simplesthings.s3-us-west-2.amazonaws.com/flashlight_white.png'
 
