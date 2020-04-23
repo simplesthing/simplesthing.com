@@ -14,9 +14,9 @@ const ContactList = styled.ul`
     display: inline-block;
     margin-right: 4%;
   }
-  
+
   @media ${mqSmall}{
-    margin-left: -5px;
+    margin-left: 0;
   }
 `
 
