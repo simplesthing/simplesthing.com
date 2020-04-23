@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 import globalStyle, { Layout } from './Style'
 import { CircusGradient } from './components/CircusGradient'
 import { Header } from './components/Header'
-import { Main } from './components/Main/Main'
+import { Main } from './components/Main'
 import { ThemeProvider } from './contexts/theme'
+import { lightBase, base, gray0 } from './Style'
 
 const rootEl = document.getElementById('root')
  
@@ -29,8 +30,8 @@ class App extends React.Component {
   render() {
     return (
       <ThemeProvider value={this.state}>
-        <CircusGradient className={this.state.theme}>
         <GlobalStyle />
+        <CircusGradient theme={this.state.theme}>
           <Header />
           <Layout>
             <Main />

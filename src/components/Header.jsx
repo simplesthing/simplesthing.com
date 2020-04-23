@@ -1,19 +1,26 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components'
 import { logoFontFamily, mqMedium, mqXlarge, mqSmall, mqXsmall } from '../Style'
-import ThemeToggle from './ThemeToggle'
+import { ThemeConsumer } from '../contexts/theme'
 
-
-export const Header = ({theme}) => {
-
-  const H1 = styled.header`
+const Head = styled.header`
   text-align: center;
-  margin-top: 10%;
-  h1 {
-    font-family: ${logoFontFamily};
+  padding-top: 10%;
+
+  @media ${mqXsmall} {
+    padding-top: 5%;
+  }
+
+  @media ${mqSmall} {
+    padding-top: 2%;
+  }
+`
+
+const H1 = styled.h1`
+font-family: ${logoFontFamily};
     font-size: 13vw;
     letter-spacing: 1vw;
-    color: #fff;
+    color: ${props => props.theme === 'light' ? '#000' : '#fff'};
     margin: 0;
 
     @media ${mqMedium} {
@@ -23,24 +30,14 @@ export const Header = ({theme}) => {
     @media ${mqXlarge} {
       font-size: 9vw;
     }
-  }
-
-  @media ${mqXsmall} {
-    margin-top: 5%;
-  }
-
-  @media ${mqSmall} {
-    margin-top: 2%;
-  }
- 
 `
 
-  return (
-    <Fragment>
-      <H1><h1>simplesthing</h1></H1>
-      <ThemeToggle />
-    </Fragment>
-  )
-}
+export const Header = () => ( 
+<ThemeConsumer>
+  {({theme}) => (
+    <Head><H1 theme={theme}>simplesthing</H1></Head>
+  )}
+</ThemeConsumer>)
+
 
 

@@ -4,6 +4,8 @@ import { darken, modularScale, stripUnit } from 'polished'
 export const base = '#0B0C0D';
 export const step1 = '#0A0B0C';
 
+export const lightBase = '#fcfcfc';
+
 // scale https://yeun.github.io/open-color/
 export const  gray0 = '#f8f9fa';
 export const  gray1 = '#f1f3f5';
@@ -17,7 +19,7 @@ export const  gray8 = '#343a40';
 export const  gray9 = '#212529';
 
 export const accent1 = '#ff3305';
-export const accent2 = '#22b8cf';
+export const accent2 = '#ff0505';
 
 export const linkColor         = `${accent2}`;
 export const linkHoverColor = darken(.15, linkColor);
@@ -74,11 +76,6 @@ export const Layout = styled.div`
   `;
     
 const globalStyle = `
-  body {
-    background-color: ${base};
-    color: ${gray0};
-  }
-
   p {
     font-family: ${fontFamily};
     font-size: ${fontSizeBase};
@@ -132,6 +129,4 @@ export default globalStyle;
 
 /** THEME STYLES */
 
-export const flashlight_black = 'https://simplesthings.s3-us-west-2.amazonaws.com/flashlight_black.png'
-export const flashlight_white = 'https://simplesthings.s3-us-west-2.amazonaws.com/flashlight_white.png'
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { base, step1 } from '../Style'
+import { base, step1, lightBase, gray0 } from '../Style'
 
 /*  checkerboard 
  background: conic-gradient(#fff 0.25turn, #000 0.25turn 0.5turn, #fff 0.5turn 0.75turn, #000 0.75turn) top left / 25% 25% repeat;
@@ -17,31 +17,51 @@ import { base, step1 } from '../Style'
 */
 
 export const CircusGradient = styled.div`
-width: 100%;
-height: 100%;
-min-width: 100vw;
-min-height: 100vh;
-background-attachment fixed;
-background: conic-gradient(
-  ${base} 0.05turn, 
-  ${step1} 0.015turn 0.10turn,
-  ${base} 0.10turn 0.15turn,
-  ${step1} 0.15turn 0.20turn,
-  ${base} 0.20turn 0.25turn,
-  ${step1} 0.25turn 0.30turn,
-  ${base} 0.30turn 0.35turn,
-  ${step1} 0.35turn 0.40turn,
-  ${base} 0.40turn 0.45turn,
-  ${step1} 0.45turn 0.50turn,
-  ${base} 0.50turn 0.55turn,
-  ${step1} 0.55turn 0.60turn,
-  ${base} 0.60turn 0.65turn,
-  ${step1} 0.65turn 0.70turn,
-  ${base} 0.70turn 0.75turn,
-  ${step1} 0.75turn 0.80turn,
-  ${base} 0.80turn 0.85turn,
-  ${step1} 0.85turn 0.90turn,
-  ${base} 0.90turn 0.95turn,
-  ${step1} 0.95turn 1.0turn
-  );
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-attachment fixed;
+  background: ${props => props.theme === 'light' ?  `conic-gradient(
+    ${lightBase} 0.05turn, 
+    ${gray0} 0.015turn 0.10turn,
+    ${lightBase} 0.10turn 0.15turn,
+    ${gray0} 0.15turn 0.20turn,
+    ${lightBase} 0.20turn 0.25turn,
+    ${gray0} 0.25turn 0.30turn,
+    ${lightBase} 0.30turn 0.35turn,
+    ${gray0} 0.35turn 0.40turn,
+    ${lightBase} 0.40turn 0.45turn,
+    ${gray0} 0.45turn 0.50turn,
+    ${lightBase} 0.50turn 0.55turn,
+    ${gray0} 0.55turn 0.60turn,
+    ${lightBase} 0.60turn 0.65turn,
+    ${gray0} 0.65turn 0.70turn,
+    ${lightBase} 0.70turn 0.75turn,
+    ${gray0} 0.75turn 0.80turn,
+    ${lightBase} 0.80turn 0.85turn,
+    ${gray0} 0.85turn 0.90turn,
+    ${lightBase} 0.90turn 0.95turn,
+    ${gray0} 0.95turn 1.0turn
+    )` : `conic-gradient(
+    ${base} 0.05turn, 
+    ${step1} 0.015turn 0.10turn,
+    ${base} 0.10turn 0.15turn,
+    ${step1} 0.15turn 0.20turn,
+    ${base} 0.20turn 0.25turn,
+    ${step1} 0.25turn 0.30turn,
+    ${base} 0.30turn 0.35turn,
+    ${step1} 0.35turn 0.40turn,
+    ${base} 0.40turn 0.45turn,
+    ${step1} 0.45turn 0.50turn,
+    ${base} 0.50turn 0.55turn,
+    ${step1} 0.55turn 0.60turn,
+    ${base} 0.60turn 0.65turn,
+    ${step1} 0.65turn 0.70turn,
+    ${base} 0.70turn 0.75turn,
+    ${step1} 0.75turn 0.80turn,
+    ${base} 0.80turn 0.85turn,
+    ${step1} 0.85turn 0.90turn,
+    ${base} 0.90turn 0.95turn,
+    ${step1} 0.95turn 1.0turn
+    )`};
 `

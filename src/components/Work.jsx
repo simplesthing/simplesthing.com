@@ -1,14 +1,18 @@
-import React from 'react';
-import {
-    Grid,
-    Item,
-    TintedGlass,
-    InfoContainer,
-    InfoTitle,
-    InfoIcons,
-    Icon,
-    Title,
-} from './mainComponents'
+import React from 'react'
+import styled from 'styled-components'
+import { ThemeConsumer } from '../contexts/theme'
+import { 
+    base,
+    fontFamily,
+    h5Size,
+    lightBase,
+    mqSmall, 
+    mqXsmall, 
+    mqMedium, 
+    mqLarge, 
+    mqXlarge, 
+    mqXxlarge, 
+} from '../Style'
 
 const cSharp = {url: 'https://simplesthings.s3-us-west-2.amazonaws.com/c%23100x.png', title: 'C#'}
 const cPp = {url: 'https://simplesthings.s3-us-west-2.amazonaws.com/C%2B%2Blogo100x.png', title: 'C++'}
@@ -25,7 +29,7 @@ const d3 = {url: 'https://simplesthings.s3-us-west-2.amazonaws.com/d3logo100x.pn
 const sass = {url: 'https://simplesthings.s3-us-west-2.amazonaws.com/sassLogo100x.png', title:'SASS'}
 const gulp = {url: 'https://simplesthings.s3-us-west-2.amazonaws.com/gulpLogo100x.png', title: 'Gulp'}
 const perl ={url: 'https://simplesthings.s3-us-west-2.amazonaws.com/perl100x.png', title:'Perl'}
-const jquery = {url:'https://simplesthings.s3-us-west-2.amazonaws.com/jqueryLogo100x.png'}
+const jquery = {url:'https://simplesthings.s3-us-west-2.amazonaws.com/jqueryLogo100x.png', title: 'jQuery'}
 const css = {url:'https://simplesthings.s3-us-west-2.amazonaws.com/css100x.png', title:'CSS'}
 const php = {url: 'https://simplesthings.s3-us-west-2.amazonaws.com/phpLogo100x.png', title: 'PHP'}
 const ember = {url:'https://simplesthings.s3-us-west-2.amazonaws.com/emberLogo100x.png', title: 'Ember'}
@@ -38,7 +42,7 @@ const items = [
     {
         title: 'Sansar Client',
         icons: [cSharp, cPp, xaml],
-        background: 'url(https://simplesthings.s3-us-west-2.amazonaws.com/vr-panel.jpg) center 10%'
+        background: 'url("https://simplesthings.s3-us-west-2.amazonaws.com/vr-panel.jpg") center 10%'
     },
     {
         title: 'Sansar Web',
@@ -84,12 +88,128 @@ const items = [
     }
 ]
 
-export const Work = () => {
-    return (
-        <Grid>
+const Grid = styled.div`
+    display: grid;
+    margin-left: 1%;
+    margin-right: 1%;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    @media ${mqXsmall} {
+        margin-left: -1%;
+        margin-right: -1%;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    @media ${mqSmall} {
+        grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+    }
+    @media ${mqMedium} {
+        grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+    }
+    @media ${mqLarge} {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+    @media ${mqXlarge} {
+        grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
+    }
+    @media ${mqXxlarge} {
+        grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+    }
+`
+
+const Item = styled.div`
+    position: relative;
+    height: 200px;
+    background: ${props => props.background};
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: ${props => props.theme === 'light' ? `solid 4px ${base}` : `solid 4px ${lightBase}`};
+    border-radius: 20px;
+    margin: 4% 3%;
+    @media ${mqXsmall} {
+        margin: 4%;
+        height: 325px;
+    }
+    @media ${mqSmall} {    
+        height: 255px;
+    }
+    @media ${mqMedium} {
+        margin: 2%;
+        height: 375px;
+    }
+    @media ${mqXlarge} {
+        height: 433px;
+    }
+`
+
+const TintedGlass = styled.div`
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background: ${props => props.theme === 'light' ? 'rgba(145, 10, 145, .8)' : 'rgba(42, 0, 42, .8)'};
+    border-radius: 0px 0px 16px 16px;
+`
+
+const InfoContainer = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+`
+
+const InfoTitle = styled.div`
+    flex: 0 1 auto;
+    margin: 1rem 0 1rem 1rem;
+    @media ${mqSmall} {
+        margin-top: 1.1rem;
+    }
+    @media ${mqMedium} {
+        margin-top: 1.25rem;
+    }
+    @media ${mqXlarge} {
+        margin-top: 1.75rem;
+    }
+`
+const Title = styled.h2`
+    display: inline;
+    position: relative;
+    font-size: ${h5Size};
+    font-family: ${fontFamily};
+    color: #fff;
+`
+
+const InfoIcons = styled.div`
+    flex: 01 auto;
+    text-align: right;
+    margin-right: 1rem;
+`
+const Icon = styled.img`
+    position: relative;
+    top: 1.1rem;
+    margin-left:.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    @media ${mqSmall} {
+        width: 2rem;
+        height: 2rem;
+        top: .75rem;
+        height: 2rem;
+    }
+    @media ${mqMedium} {
+        top: 1rem;
+    }
+    @media ${mqXlarge} {
+        width: 2.5rem
+        height: 2.5rem;
+        top: 1.1rem;
+    }
+`
+
+export const Work = () => (
+    <ThemeConsumer>
+        {({theme}) => (
+            <Grid>
             {items.map( item => (
-                <Item backgroud={item.background} key={Math.random()}>
-                    <TintedGlass>
+                <Item background={item.background} key={Math.random()} theme={theme}>
+                    <div style={{background: item.background}}></div>
+                    <TintedGlass theme={theme}>
                         <InfoContainer>
                             <InfoTitle>
                                 <Title>{item.title}</Title>
@@ -104,6 +224,7 @@ export const Work = () => {
                     </TintedGlass>
                 </Item>
             ))}
-        </Grid>    
-    )
-}
+            </Grid>    
+        )}
+    </ThemeConsumer>
+)
