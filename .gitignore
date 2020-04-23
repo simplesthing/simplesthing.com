@@ -7,3 +7,4 @@
 **/.DS_Store
 configuration.js
 node_modules/
+dist/
