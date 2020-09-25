@@ -12,7 +12,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   min-height: 100vh;
   background: ${(props) => (props.light ? lightBase : base)};
@@ -42,9 +42,7 @@ class App extends React.Component {
         <GlobalStyle />
         <Wrapper>
           <Header />
-          <Layout>
-            <Main />
-          </Layout>
+          <Main />
         </Wrapper>
       </ThemeProvider>
     );

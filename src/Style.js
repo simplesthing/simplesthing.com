@@ -89,6 +89,8 @@ const globalStyle = `
 
   h1,h2,h3,h4,h5,h6 {
     font-family: ${headerFontFamily};
+    font-weight: 900;
+    font-style: italic;
     color: ${accent1};
     margin: ${marginBase} 0;
   }

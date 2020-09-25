@@ -1,4 +1,5 @@
 import {
+  Layout,
   accent1,
   accent2,
   base,
@@ -8,6 +9,7 @@ import {
   lightBase,
   mqLarge,
   mqMedium,
+  mqSmall,
 } from "../Style";
 
 import { Contacts } from "./Contacts";
@@ -38,6 +40,11 @@ const H1 = styled.h1`
 
 const P = styled.p`
   color: ${(props) => (props.theme === "light" ? `${base}` : `${lightBase}`)};
+  margin-left: 4%;
+  margin-right: 4%;
+  @media ${mqMedium} {
+    margin: 0;
+  }
 `;
 
 const FlexRow = styled.div`
@@ -48,7 +55,7 @@ const FlexRow = styled.div`
 export const Main = () => (
   <ThemeConsumer>
     {({ theme }) => (
-      <React.Fragment>
+      <Layout>
         <H1 theme={theme}>about</H1>
         <P theme={theme}>
           Over the years I have worked with different languages, application
@@ -66,7 +73,7 @@ export const Main = () => (
         <Work />
         <H1 theme={theme}>contact</H1>
         <Contacts />
-      </React.Fragment>
+      </Layout>
     )}
   </ThemeConsumer>
 );

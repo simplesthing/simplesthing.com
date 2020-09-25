@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.js",
-    "build": "NODE_ENV='productiopn' webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-production": "webpack && scp -r ./dist/* ava@165.227.53.126:/var/www/simplesthing.com/html"
   },
   "author": "",
   "license": "ISC",

@@ -252,6 +252,7 @@ const Title = styled.h2`
   position: relative;
   font-size: ${h5Size};
   font-family: ${fontFamily};
+  font-style: normal;
   color: #fff;
 `;
 
