@@ -1,43 +1,40 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components'
-import { logoFontFamily, mqMedium, mqXlarge, mqSmall, mqXsmall } from '../Style'
-import { ThemeConsumer } from '../contexts/theme'
+import React, { Fragment } from "react";
+import {
+  logoFontFamily,
+  mqMedium,
+  mqSmall,
+  mqXlarge,
+  mqXsmall,
+} from "../Style";
 
-const Head = styled.header`
-  text-align: center;
-  padding-top: 10%;
+import { ThemeConsumer } from "../contexts/theme";
+import styled from "styled-components";
 
-  @media ${mqXsmall} {
-    padding-top: 5%;
-  }
-
-  @media ${mqSmall} {
-    padding-top: 2%;
-  }
-`
-
-const H1 = styled.h1`
-font-family: ${logoFontFamily};
-    font-size: 13vw;
-    letter-spacing: 1vw;
-    color: ${props => props.theme === 'light' ? '#000' : '#fff'};
-    margin: 0;
-
-    @media ${mqMedium} {
-      font-size: 10vw;
+const Wrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+  model-viewer {
+    width: 99vw;
+    height: 20vh;
+    @media ${mqSmall} {
+      height: 40vh;
     }
-    
-    @media ${mqXlarge} {
-      font-size: 9vw;
-    }
-`
+  }
+`;
 
-export const Header = () => ( 
-<ThemeConsumer>
-  {({theme}) => (
-    <Head><H1 theme={theme}>simplesthing</H1></Head>
-  )}
-</ThemeConsumer>)
-
-
-
+export const Header = () => (
+  <ThemeConsumer>
+    {({ theme }) => (
+      <Wrapper>
+        <model-viewer
+          src="https://simplesthings.s3-us-west-2.amazonaws.com/simples.glb"
+          camera-controls
+          alt="Simple 3D model viewer with the word simplesthings written in script with a fox, flowers and butterfly painted in Tiltbrush"
+          camera-orbit="160deg 90deg 50%"
+        ></model-viewer>
+      </Wrapper>
+    )}
+  </ThemeConsumer>
+);

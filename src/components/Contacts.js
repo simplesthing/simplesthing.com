@@ -1,7 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-import { accent1, base, lightBase, marginBase, mqSmall } from '../Style'
-import { ThemeConsumer } from '../contexts/theme'
+import {
+  accent1,
+  accent2,
+  base,
+  lightBase,
+  marginBase,
+  mqSmall,
+} from "../Style";
+
+import React from "react";
+import { ThemeConsumer } from "../contexts/theme";
+import styled from "styled-components";
 
 const ContactList = styled.ul`
   display: block;
@@ -15,16 +23,18 @@ const ContactList = styled.ul`
     margin-right: 4%;
   }
 
-  @media ${mqSmall}{
+  @media ${mqSmall} {
     margin-left: 0;
   }
-`
+`;
 
 const SocialLink = styled.a`
   display: inline-block;
   width: 50px;
   height: 50px;
-  border: ${props => props.theme === 'light' ? `2px solid ${base}` : `2px solid ${lightBase}`};
+  color: ${accent2}!important;
+  border: ${(props) =>
+    props.theme === "light" ? `2px solid ${base}` : `2px solid ${lightBase}`};
   border-radius: 100%;
   text-align: center;
   font-size: 20px;
@@ -32,35 +42,52 @@ const SocialLink = styled.a`
   margin-top: 15px;
   font-size: 20px;
   background: 0 0;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
-  &:hover, &:focus, &:active, &:visited {
-    border: ${props => props.theme === 'light' ? `2px solid ${base}` : `2px solid ${lightBase}`};
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    border: ${(props) =>
+      props.theme === "light" ? `2px solid ${base}` : `2px solid ${lightBase}`};
     color: ${accent1};
-    background: ${props => props.theme === 'light' ? `${base}` : `${lightBase}`}
+    background: ${(props) =>
+      props.theme === "light" ? `${base}` : `${lightBase}`};
   }
-`
+`;
 
-export const Contacts = ()  => (
+export const Contacts = () => (
   <ThemeConsumer>
-    {({theme}) => (
+    {({ theme }) => (
       <ContactList>
-      <li>
-        <SocialLink href="//github.com/simplesthing" title="find me on github" theme={theme}>
-          <i className="fab fa-github"></i>
-        </SocialLink>
-      </li>
-      <li>
-        <SocialLink href="//www.linkedin.com/in/simplesthing" title="find me on linkedIn" theme={theme}>
-          <i className="fab fa-linkedin-in"></i>
-        </SocialLink>
-      </li>
-      <li>
-        <SocialLink href="//twitter.com/simplesthing" title="find me on twitter" theme={theme}>
-        <i className="fab fa-twitter"></i>
-        </SocialLink>
-      </li>
-    </ContactList>
+        <li>
+          <SocialLink
+            href="//github.com/simplesthing"
+            title="find me on github"
+            theme={theme}
+          >
+            <i className="fab fa-github"></i>
+          </SocialLink>
+        </li>
+        <li>
+          <SocialLink
+            href="//www.linkedin.com/in/simplesthing"
+            title="find me on linkedIn"
+            theme={theme}
+          >
+            <i className="fab fa-linkedin-in"></i>
+          </SocialLink>
+        </li>
+        <li>
+          <SocialLink
+            href="//twitter.com/simplesthing"
+            title="find me on twitter"
+            theme={theme}
+          >
+            <i className="fab fa-twitter"></i>
+          </SocialLink>
+        </li>
+      </ContactList>
     )}
   </ThemeConsumer>
-)
+);
