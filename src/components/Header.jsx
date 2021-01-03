@@ -1,16 +1,9 @@
-import React, { Fragment } from "react";
-import {
-  logoFontFamily,
-  mqMedium,
-  mqSmall,
-  mqXlarge,
-  mqXsmall,
-} from "../Style";
-
+import React from "react";
 import { ThemeConsumer } from "../contexts/theme";
+import { mqSmall } from "../Style";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const Wrapper = styled.header`
   display: flex;
   width: 100%;
   justify-content: center;
@@ -20,6 +13,10 @@ const Wrapper = styled.div`
     height: 20vh;
     @media ${mqSmall} {
       height: 40vh;
+    }
+
+    *:focus {
+      outline-color: red;
     }
   }
 `;
@@ -31,8 +28,9 @@ export const Header = () => (
         <model-viewer
           src="https://simplesthings.s3-us-west-2.amazonaws.com/simples.glb"
           camera-controls
-          alt="Simple 3D model viewer with the word simplesthings written in script with a fox, flowers and butterfly painted in Tiltbrush"
-          camera-orbit="160deg 90deg 50%"
+          role="img"
+          aria-label="3D model viewer web component with the word simplesthing written in script with a fox, flowers and butterfly painted in Tiltbrush VR painting application"
+          camera-orbit="160deg 90deg 5%"
         ></model-viewer>
       </Wrapper>
     )}

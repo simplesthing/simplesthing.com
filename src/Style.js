@@ -44,7 +44,7 @@ export const mqRetina =
 
 export const marginBase = "4%";
 
-export const Layout = styled.div`
+export const Layout = styled.main`
   background: ${base};
   height: 100%;
   margin: 0 2%;
@@ -113,6 +113,16 @@ const globalStyle = `
   }
   h6 {
     font-size: ${h6Size};
+  }
+
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
   }
 `;
 

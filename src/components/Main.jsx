@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
   align-items: center;
 `;
 
-const H1 = styled.h1`
+const H2 = styled.h2`
   flex-grow: 1;
   display: inline-block;
   font-size: ${h3Size};
@@ -56,23 +56,33 @@ export const Main = () => (
   <ThemeConsumer>
     {({ theme }) => (
       <Layout>
-        <H1 theme={theme}>about</H1>
-        <P theme={theme}>
-          Over the years I have worked with different languages, application
-          stacks, design systems, project management techniques, JavaScript
-          frameworks, CSS processors and most importantly people. Involvement in
-          community and critically thinking of ways to improve how we work with
-          one another is just as important to me as writing code. Our
-          understanding of ourselves affects our products and how we make them.
-          Inclusion of all personas and the practice of empathy leads the way to
-          making better products and a better world.
-        </P>
-        <H1 style={{ marginTop: "1rem" }} theme={theme}>
-          work
-        </H1>
-        <Work />
-        <H1 theme={theme}>contact</H1>
-        <Contacts />
+        <h1 className="sr-only">
+          Personal website for web developer Ava Collins
+        </h1>
+        <section>
+          <H2 theme={theme}>about</H2>
+          <P theme={theme}>
+            Over the years I have worked with different languages, application
+            stacks, design systems, project management techniques, JavaScript
+            frameworks, CSS processors and most importantly people. Involvement
+            in community and critically thinking of ways to improve how we work
+            with one another is just as important to me as writing code. Our
+            understanding of ourselves affects our products and how we make
+            them. When we make an effort to consciously include all personas and
+            to practice empathy we lead the way to making better products,
+            workplaces and a better world for all.
+          </P>
+        </section>
+        <section>
+          <H2 style={{ marginTop: "1rem" }} theme={theme}>
+            work
+          </H2>
+          <Work />
+        </section>
+        <section>
+          <H2 theme={theme}>contact</H2>
+          <Contacts />
+        </section>
       </Layout>
     )}
   </ThemeConsumer>

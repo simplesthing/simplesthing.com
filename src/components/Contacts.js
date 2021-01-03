@@ -64,6 +64,7 @@ export const Contacts = () => (
           <SocialLink
             href="//github.com/simplesthing"
             title="find me on github"
+            aria-label="find me on github"
             theme={theme}
           >
             <i className="fab fa-github"></i>
@@ -73,6 +74,7 @@ export const Contacts = () => (
           <SocialLink
             href="//www.linkedin.com/in/simplesthing"
             title="find me on linkedIn"
+            aria-label="find me on linkedIn"
             theme={theme}
           >
             <i className="fab fa-linkedin-in"></i>
@@ -82,6 +84,7 @@ export const Contacts = () => (
           <SocialLink
             href="//twitter.com/simplesthing"
             title="find me on twitter"
+            aria-label="find me on twitter"
             theme={theme}
           >
             <i className="fab fa-twitter"></i>

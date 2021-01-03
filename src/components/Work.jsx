@@ -112,61 +112,76 @@ const flash = {
 const items = [
   {
     title: "Sansar Client",
+    description:
+      "Virtual reality menu tablet displaying avatar information for a player in Sansar.",
     icons: [cSharp, cPp, xaml],
     background:
       'url("https://simplesthings.s3-us-west-2.amazonaws.com/vr-panel.jpg") center 10%',
   },
   {
     title: "Sansar Web",
+    description: "Screenshot of the homepage for sansar.com on July 2019.",
     icons: [aws, node, react, styledComponents],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/sansar-home-2019-rebrand.jpg) left center",
   },
   {
     title: "Sansar Scripts",
+    description:
+      "Image taken from video stream of Sansar Scripting Office Hours, and event to teach interactive scripting for the sansar game engine.",
     icons: [cSharp, sansar, github],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/office+hours.jpg) left bottom",
   },
   {
     title: "SFJS",
+    description:
+      "Logo for Seattle Feminist JS, a meetup group to teach JavaScript and specifically react.js to women for free.",
     icons: [react, webpack, github],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/SFJS.jpg) center center",
   },
   {
     title: "Apollo",
+    description: "Screenshot of Career Bootcamp website.",
     icons: [angular, d3, sass, gulp],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/bootcamp.png)",
   },
   {
     title: "Amazon",
+    description:
+      "Screenshot of amazon.com homepage showing an interactive slideshow style widget in the top banner section, authored in 2013",
     icons: [perl, html, jquery, css, html],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/amazon.png) left top",
   },
   {
     title: "Nordstrom",
+    description:
+      "Screenshot of Nordstrom beauty blog that was launched in 2012 along with 3 other blogs.",
     icons: [php, jquery, html, css],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/nordstrom.png)",
   },
   {
     title: "Disney",
+    description: "Screenshot of Disney chat widget on Disney website in 2011.",
     icons: [ember, xmpp, css, html],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/disney-chat.png)",
   },
   {
     title: "Real Networks",
+    description:
+      "Screenshot of Superpass live video streaming website made in 2010 by Real Networks and CBS for the reality TV show Big Brother.",
     icons: [jsp, jquery, flash],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/superpass+screen.jpg) left top",
   },
 ];
 
-const Grid = styled.div`
+const Grid = styled.section`
   display: grid;
   margin-left: 1%;
   margin-right: 1%;
@@ -193,7 +208,7 @@ const Grid = styled.div`
   }
 `;
 
-const Item = styled.div`
+const Item = styled.article`
   position: relative;
   height: 200px;
   background: ${(props) => props.background};
@@ -247,7 +262,7 @@ const InfoTitle = styled.div`
     margin-top: 1.75rem;
   }
 `;
-const Title = styled.h2`
+const Title = styled.h3`
   display: inline;
   position: relative;
   font-size: ${h5Size};
@@ -289,24 +304,32 @@ export const Work = () => (
       <Grid>
         {items.map((item) => (
           <Item background={item.background} key={Math.random()} theme={theme}>
-            <div style={{ background: item.background }}></div>
             <TintedGlass theme={theme}>
               <InfoContainer>
                 <InfoTitle>
                   <Title>{item.title}</Title>
                 </InfoTitle>
-                <InfoIcons>
+                <InfoIcons
+                  role="list"
+                  aria-label={`Languages used to code projects at ${item.title}`}
+                >
                   {item.icons.map((icon) => (
                     <Icon
                       src={icon.url}
                       title={icon.title}
                       alt={icon.title}
                       key={Math.random()}
+                      role="listitem"
                     />
                   ))}
                 </InfoIcons>
               </InfoContainer>
             </TintedGlass>
+            <div
+              style={{ background: item.background }}
+              role="img"
+              aria-label={item.description}
+            ></div>
           </Item>
         ))}
       </Grid>
