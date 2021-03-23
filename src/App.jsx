@@ -1,13 +1,13 @@
 import { base, lightBase } from "./Style";
 import globalStyle, { Layout } from "./Style";
 
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
+
 import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "./contexts/theme";
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
+import Router from './pages/Router'
 
 const Wrapper = styled.div`
   display: flex;
@@ -41,8 +41,7 @@ class App extends React.Component {
       <ThemeProvider value={this.state}>
         <GlobalStyle />
         <Wrapper>
-          <Header />
-          <Main />
+          <Router/>
         </Wrapper>
       </ThemeProvider>
     );

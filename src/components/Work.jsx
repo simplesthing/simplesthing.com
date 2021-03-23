@@ -14,6 +14,7 @@ import {
 import React from "react";
 import { ThemeConsumer } from "../contexts/theme";
 import styled from "styled-components";
+import Link from 'react-router-dom/Link';
 
 const cSharp = {
   url: "https://simplesthings.s3-us-west-2.amazonaws.com/c%23100x.png",
@@ -117,6 +118,7 @@ const items = [
     icons: [cSharp, cPp, xaml],
     background:
       'url("https://simplesthings.s3-us-west-2.amazonaws.com/vr-panel.jpg") center 10%',
+    path: '/sansar-client'
   },
   {
     title: "Sansar Web",
@@ -298,40 +300,44 @@ const Icon = styled.img`
     }
 `;
 
+
 export const Work = () => (
   <ThemeConsumer>
     {({ theme }) => (
       <Grid>
-        {items.map((item) => (
-          <Item background={item.background} key={Math.random()} theme={theme}>
-            <TintedGlass theme={theme}>
-              <InfoContainer>
-                <InfoTitle>
-                  <Title>{item.title}</Title>
-                </InfoTitle>
-                <InfoIcons
-                  role="list"
-                  aria-label={`Languages used to code projects at ${item.title}`}
-                >
-                  {item.icons.map((icon) => (
-                    <Icon
-                      src={icon.url}
-                      title={icon.title}
-                      alt={icon.title}
-                      key={Math.random()}
-                      role="listitem"
-                    />
-                  ))}
-                </InfoIcons>
-              </InfoContainer>
-            </TintedGlass>
-            <div
-              style={{ background: item.background }}
-              role="img"
-              aria-label={item.description}
-            ></div>
-          </Item>
-        ))}
+        {items.map((item) => {
+          const Card = (
+            <Item background={item.background} theme={theme} key={item.title}>
+              <TintedGlass theme={theme}>
+                  <InfoContainer>
+                    <InfoTitle>
+                      <Title>{item.title}</Title>
+                    </InfoTitle>
+                    <InfoIcons
+                      role="list"
+                      aria-label={`Languages used to code projects at ${item.title}`}
+                      >
+                      {item.icons.map((icon) => (
+                        <Icon
+                        src={icon.url}
+                        title={icon.title}
+                        alt={icon.title}
+                        key={Math.random()}
+                        role="listitem"
+                        />
+                        ))}
+                    </InfoIcons>
+                  </InfoContainer>
+                </TintedGlass>
+                <div
+                  style={{ background: item.background }}
+                  role="img"
+                  aria-label={item.description}
+                  ></div>
+            </Item>)
+          return item.path ? (<Link to={item.path} key={item.title}>{Card}</Link>) : Card
+        }
+        )}
       </Grid>
     )}
   </ThemeConsumer>
