@@ -9,6 +9,9 @@ export const accent1 = "#ff3305";
 export const accent2 = "#579552";
 export const nuetral = "##6B4A5C";
 
+const test = "rgba(2, 83, 102, .8)"
+
+
 export const linkColor = `${accent2}`;
 export const linkHoverColor = darken(0.15, linkColor);
 

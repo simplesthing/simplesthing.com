@@ -215,8 +215,7 @@ const Item = styled.article`
   background-size: cover;
   background-repeat: no-repeat;
   border: ${(props) =>
-    props.theme === "light" ? `solid 4px ${base}` : `solid 4px ${lightBase}`};
-  border-radius: 20px;
+    props.theme === "light" ? `solid 2px ${base}` : `solid 2px ${lightBase}`};
   margin: 4% 3%;
   @media ${mqXsmall} {
     margin: 4%;
@@ -234,14 +233,15 @@ const Item = styled.article`
   }
 `;
 
+var lightGlass = ''
+
 const TintedGlass = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 20%;
   background: ${(props) =>
-    props.theme === "light" ? "rgba(145, 10, 145, .8)" : "rgba(42, 0, 42, .8)"};
-  border-radius: 0px 0px 16px 16px;
+    props.theme === "light" ? "rgba(39, 54, 25, .7)" : "rgba(39, 54, 25, .7)"};
 `;
 
 const InfoContainer = styled.div`
