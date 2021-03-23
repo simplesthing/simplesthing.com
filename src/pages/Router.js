@@ -11,7 +11,7 @@ export default () => (
       atLeave={{ offset: -100 }}
       atActive={{ offset: 0 }}
     >
-      <Route exact path="/" component={Sansar} />
+      <Route exact path="/" component={HomePage} />
       <Route exact path="/sansar-client" component={Sansar} />
       {/* <Route path="/about/" component={About}/>
       <Route path="/etc/" component={Etc}/> */}
