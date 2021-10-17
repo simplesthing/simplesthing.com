@@ -1,0 +1,12 @@
+{
+  "extends": ["eslint:recommended", "next"],
+  "rules" : {
+    "semi": [2, "always"],
+    "quotes": ["error", "double"]
+  },
+  "settings": {
+    "next": {
+      "rootDir": "."
+    }
+  }
+}
