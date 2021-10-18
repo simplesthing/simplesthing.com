@@ -86,10 +86,10 @@ const SansarMobile = () => {
                     </div>
                     <div>
                         <PaddedImg>
-                            <Image src={`${imgPath}login_landscape.png`} width={imgHeight} height={imgWidth / 1.5} alt="Simple Flow for app pages, login, list, video" />
+                            <Image src={`${imgPath}login_landscape.png`} width={imgHeight} height={imgWidth / 1.5} alt="Login screen" />
                         </PaddedImg>
                         <PaddedImg>
-                            <Image src={`${imgPath}live_cameras.png`} width={imgWidth} height={imgHeight * 1.5} alt="Video player mockup" />
+                            <Image src={`${imgPath}live_cameras.png`} width={imgWidth} height={imgHeight * 1.5} alt="Live cameras at event" />
                         </PaddedImg>
                     </div>
                 </Spread>
@@ -100,10 +100,10 @@ const SansarMobile = () => {
                 <h2>Ticket sales</h2>
                 <Spread>
                     <PaddedImg>
-                        <Image src={`${imgPath}ticket_test.png`} width={pHeight} height={pWidth} alt="Video player mockups" />
+                        <Image src={`${imgPath}ticket_test.png`} width={pHeight} height={pWidth} alt="Buy ticket and add to calendar features" />
                     </PaddedImg>
                     <PaddedImg>
-                        <Image src={`${imgPath}ticket_sale.png`} width={pHeight} height={pWidth} alt="Vide player mockups with chat" />
+                        <Image src={`${imgPath}ticket_sale.png`} width={pHeight} height={pWidth} alt="Successful ticket purchase screen" />
                     </PaddedImg>
                 </Spread>
             </Section>
