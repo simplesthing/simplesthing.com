@@ -5,10 +5,11 @@ const BackToHomeStyle = styled.div`
     margin: 3rem 1rem;
 `;
 
-const BackToHome = (anchor) => {
+
+const BackToHome = () => {
     return (
         <BackToHomeStyle>
-        <Link href={`/${anchor}`}>
+        <Link href={"/"}>
           <a><p>&lt; Back to home</p></a>
         </Link>
       </BackToHomeStyle>

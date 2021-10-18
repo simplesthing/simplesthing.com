@@ -4,6 +4,8 @@ import Layout from "../../components/layout";
 import { lightBase } from "../../components/styles/index";
 import Image from "next/image";
 import Head from "next/head";
+import { DefaultMarginTop } from "../../components/styles/utilities";
+
 
 const P = styled.p`
   color: ${lightBase};
@@ -17,7 +19,7 @@ const Spread = styled.section`
     justify-content: space-between;
 `;
 
-const PaddedImg = styled.img`
+const PaddedImg = styled(Image)`
     padding: 0 1rem;
 `;
 
@@ -31,13 +33,19 @@ const Sansar = () => {
     const imgHeight2 = imgWidth * 1.3;
 
     return (
-        <Layout homeAnchor="#work">
+        <Layout>
             <Head>
                 <title>sansar client | simplesthing</title>
             </Head>
-            <h1 className="sr-only">Sansar user interface</h1>
             <h1> Sansar client</h1>
-            <P>Client UI built using a custom C++ implementation of XAML called Noesis Engine. Every interaction and rendering effect had to be added manually, there was nothing &quot;out of the box&quot; until we made it that way.</P>
+            <P>Sansar PC game client UI built using a C++ implementation of XAML called Noesis Engine. Every interaction and rendering effect had to be added manually, 
+                there was nothing &quot;out of the box.&quot;</P>
+            <DefaultMarginTop/>
+            <P>I spent a little over one year working in a completely different environment from JavaScript. With the right amount of hand holding and freedom 
+                I was able to transfer all of my experience building web applications to the game client. I introduced a more a modular style of coding to the UI code base,
+                and started working on extending functionality with view properties and shared variables.
+            </P>
+
 
             <Section>
                 <h2>Quest System</h2>
@@ -54,11 +62,10 @@ const Sansar = () => {
                     <iframe width={pWidth} height={pHeight} src="https://www.youtube-nocookie.com/embed/Ow80IEhEgMQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </Section>
             </Section>
-            <section>
+            <Section>
                 <h2>Social</h2>
-                <P>Implementation of search for a friend to start a chat conversation and adding emoji support.</P>
                 <iframe width={pWidth} height={pHeight} src="https://www.youtube-nocookie.com/embed/3n4i3Ivnoo4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            </section>
+            </Section>
             <Section>
                 <Spread>
                     <Image src={`${imgPath}vr-prototype-dashboard.png`} width={imgWidth} height={imgHeight} alt="VR dashboard prototype" />
@@ -66,6 +73,14 @@ const Sansar = () => {
                     <Image src={`${imgPath}vr-prototype-chat.png`} width={imgWidth} height={imgHeight} alt="VR chat panel prototype" />
                     <Image src={`${imgPath}vr-prototype-messages.png`} width={imgWidth} height={imgHeight} alt="VR profile panel" />
                 </Spread>
+            </Section>
+            <Section>
+                <h2>Marketplace</h2>
+                <iframe width={pWidth} height={pHeight} src="https://www.youtube.com/embed/VQAbuIJW-kg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            </Section>
+            <Section>
+                <h2>Codex</h2>
+                <iframe width={pWidth} height={pHeight} src="https://www.youtube.com/embed/DJSEqMVChdE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </Section>
             <Section>
                 <h2>Vr</h2>

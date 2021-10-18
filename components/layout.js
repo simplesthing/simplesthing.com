@@ -32,7 +32,7 @@ const Wrapper = styled.header`
 
 const DynamicHeader = dynamic(() => import("./tiltbrush-header"), { loading: () => <h6> loading glb...</h6> });
 
-export default function Layout({ children, home, homeAnchor }) {
+export default function Layout({ children, home }) {
   return <>
     <Head>
       <title>ava collins | simplesthing</title>
@@ -55,12 +55,12 @@ export default function Layout({ children, home, homeAnchor }) {
     )
     }
     {!home && (
-      <BackToHome anchor={homeAnchor} />
+      <BackToHome />
     )}
     <Container>{children}</Container>
 
     {!home && (
-      <BackToHome anchor={homeAnchor}/>
+      <BackToHome/>
     )}
 
   </>;
