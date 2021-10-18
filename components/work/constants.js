@@ -118,6 +118,8 @@ export const WORK_HISTORY = [
     icons: [aws, node, react, styledComponents],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/sansar-home-2019-rebrand.jpg) left center",
+      path: "https://sansar.com",
+      external:true
   },
   {
     title: "Sansar Scripts",
@@ -126,6 +128,8 @@ export const WORK_HISTORY = [
     icons: [cSharp, sansar, github],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/office+hours.jpg) left bottom",
+      path: "https://simplesthing.github.io/sansar-creator-resources/",
+      external: true
   },
   {
     title: "SFJS",
@@ -134,6 +138,8 @@ export const WORK_HISTORY = [
     icons: [react, webpack, github],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/SFJS.jpg) center center",
+      path: "https://seattlefeministjs.github.io/",
+      external: true
   },
   {
     title: "Apollo",
