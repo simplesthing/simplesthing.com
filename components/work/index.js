@@ -162,7 +162,7 @@ const Work = () => (
                   aria-label={item.description}
                   ></div>
             </Item>);
-          return item.path ? (!!item.external ? (<Link href={item.path}  key={item.title}><a target="_blank">{Card}</a></Link>) : (<Link href={item.path} key={item.title}><a>{Card}</a></Link>)) : Card
+          return item.path ? (item.external ? (<Link href={item.path}  key={item.title}><a target="_blank">{Card}</a></Link>) : (<Link href={item.path} key={item.title}><a>{Card}</a></Link>)) : Card;
         }
         )}
       </Grid>
