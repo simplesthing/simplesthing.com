@@ -103,7 +103,7 @@ const SansarMobile = () => {
                         <Image src={`${imgPath}ticket_test.png`} width={pHeight} height={pWidth} alt="Buy ticket and add to calendar features" />
                     </PaddedImg>
                     <PaddedImg>
-                        <Image src={`${imgPath}ticket_sale.png`} width={pHeight} height={pWidth} alt="Successful ticket purchase screen" />
+                        <Image src={`${imgPath}ticket_sales.png`} width={pHeight} height={pWidth} alt="Successful ticket purchase screen" />
                     </PaddedImg>
                 </Spread>
             </Section>
