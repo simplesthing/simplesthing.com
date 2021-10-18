@@ -17,7 +17,7 @@ class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Modak&family=Raleway&family=Sansita:wght@900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&family=Sansita:wght@900&display=swap"
             rel="stylesheet"
           />
         </Head>

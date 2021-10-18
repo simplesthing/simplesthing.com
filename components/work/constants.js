@@ -103,6 +103,14 @@ const flash = {
 
 export const WORK_HISTORY = [
   {
+    title: "Porch Mobile",
+    description:
+      "Moving, improving, and everything in between. Porch makes moving, insurance, and improving your home, simple.",
+    icons: [react, expo, jest],
+    background:
+      "url(\"/images/work/porch/porch-logo-standard.png\") center center"
+  }, 
+  {
     title: "Sansar Mobile",
     description:
       "The Sansar mobile app is an extension of the Sansar virtual events platform, a destination for innovative live events on PC and VR.",

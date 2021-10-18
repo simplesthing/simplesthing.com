@@ -1,13 +1,14 @@
 import {
-  accent2,
-    fontFamily,
-    h5Size,
-    mqLarge,
-    mqMedium,
-    mqSmall,
-    mqXlarge,
-    mqXsmall,
-    mqXxlarge
+  lightBase,
+  nuetral,
+  fontFamily,
+  h5Size,
+  mqLarge,
+  mqMedium,
+  mqSmall,
+  mqXlarge,
+  mqXsmall,
+  mqXxlarge
 } from "../styles/index";
 import Link from "next/link";
 import styled from "styled-components";
@@ -46,8 +47,9 @@ const Item = styled.article`
   background: ${(props) => props.background};
   background-size: cover;
   background-repeat: no-repeat;
-  border: solid 4px ${accent2};
+  border: solid 5px ${nuetral};
   border-radius: 2px;
+  box-shadow:-3px 4px 5px rgba(0,0,0,.75);
   margin: 4% 3%;
   @media ${mqXsmall} {
     margin: 4%;
@@ -70,8 +72,8 @@ const TintedGlass = styled.div`
   bottom: 0;
   width: 100%;
   height: 20%;
-  background: rgba(107, 74, 92, .7);
-  border-top: solid 4px ${accent2};
+  background: rgba(0, 0, 0, .65);
+  border-top: solid 4px ${nuetral};
 `;
 
 const InfoContainer = styled.div`
@@ -99,7 +101,9 @@ const Title = styled.h3`
   font-size: ${h5Size};
   font-family: ${fontFamily};
   font-style: normal;
+  font-weight: bold;
   color: #fff;
+  letter-spacing: 1px;
 `;
 
 const InfoIcons = styled.div`
@@ -131,41 +135,41 @@ const Icon = styled.img`
 `;
 
 const Work = () => (
-    <Grid>
-        {WORK_HISTORY.map((item) => {
-          const Card = (
-            <Item background={item.background} key={item.title}>
-              <TintedGlass >
-                  <InfoContainer>
-                    <InfoTitle>
-                      <Title>{item.title}</Title>
-                    </InfoTitle>
-                    <InfoIcons
-                      role="list"
-                      aria-label={`Languages used to code projects at ${item.title}`}
-                      >
-                      {item.icons.map((icon) => (
-                        <Icon
-                        src={icon.url}
-                        title={icon.title}
-                        alt={icon.title}
-                        key={Math.random()}
-                        role="listitem"
-                        />
-                        ))}
-                    </InfoIcons>
-                  </InfoContainer>
-                </TintedGlass>
-                <div
-                  style={{ background: item.background }}
-                  role="img"
-                  aria-label={item.description}
-                  ></div>
-            </Item>);
-          return item.path ? (item.external ? (<Link href={item.path}  key={item.title}><a target="_blank">{Card}</a></Link>) : (<Link href={item.path} key={item.title}><a>{Card}</a></Link>)) : Card;
-        }
-        )}
-      </Grid>
+  <Grid>
+    {WORK_HISTORY.map((item) => {
+      const Card = (
+        <Item background={item.background} key={item.title}>
+          <TintedGlass >
+            <InfoContainer>
+              <InfoTitle>
+                <Title>{item.title}</Title>
+              </InfoTitle>
+              <InfoIcons
+                role="list"
+                aria-label={`Languages used to code projects at ${item.title}`}
+              >
+                {item.icons.map((icon) => (
+                  <Icon
+                    src={icon.url}
+                    title={icon.title}
+                    alt={icon.title}
+                    key={Math.random()}
+                    role="listitem"
+                  />
+                ))}
+              </InfoIcons>
+            </InfoContainer>
+          </TintedGlass>
+          <div
+            style={{ background: item.background }}
+            role="img"
+            aria-label={item.description}
+          ></div>
+        </Item>);
+      return item.path ? (item.external ? (<Link href={item.path} key={item.title}><a target="_blank">{Card}</a></Link>) : (<Link href={item.path} key={item.title}><a>{Card}</a></Link>)) : Card;
+    }
+    )}
+  </Grid>
 );
 
 export default Work;

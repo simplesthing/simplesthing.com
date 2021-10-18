@@ -12,7 +12,6 @@ export const nuetral = "#6B4A5C";
 export const linkColor = `${accent2}`;
 export const linkHoverColor = darken(0.15, linkColor);
 
-export const logoFontFamily = "Modak";
 export const fontFamily = "Raleway";
 export const headerFontFamily = "Sansita";
 
