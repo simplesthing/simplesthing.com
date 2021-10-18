@@ -22,6 +22,14 @@ const react = {
   url: "https://simplesthings.s3-us-west-2.amazonaws.com/reactLogo100x.png",
   title: "React",
 };
+const expo = {
+  url: "/images/work/sansar/mobile/ExpoLogo100.png",
+  title: "Expo",
+};
+const jest = {
+  url: "/images/work/sansar/mobile/JestLogo.png",
+  title: "Jest",
+};
 const styledComponents = {
   url:
     "https://simplesthings.s3-us-west-2.amazonaws.com/styled-component100x.png",
@@ -98,7 +106,7 @@ export const WORK_HISTORY = [
     title: "Sansar Mobile",
     description:
       "The Sansar mobile app is an extension of the Sansar virtual events platform, a destination for innovative live events on PC and VR.",
-    icons: [cSharp, cPp, xaml],
+    icons: [react, expo, jest],
     background:
       "url(\"/images/work/sansar/mobile/iphone-screenshots.png\") center center",
     path: "/work/sansar-mobile"
