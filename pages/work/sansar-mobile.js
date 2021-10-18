@@ -94,7 +94,7 @@ const SansarMobile = () => {
                     </div>
                 </Spread>
 
-                <a href="https://simplesthings.s3.us-west-2.amazonaws.com/2020-07-04+17-42-26.mp4">Lost Horizons recording from inside Sansar</a>
+                <a href="https://simplesthings.s3.us-west-2.amazonaws.com/2020-07-04+17-42-26.mp4" target="_blank" rel="noreferrer">Lost Horizons recording from inside Sansar</a>
             </Section>
             <Section>
                 <h2>Ticket sales</h2>
