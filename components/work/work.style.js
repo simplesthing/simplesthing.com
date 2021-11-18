@@ -1,27 +1,28 @@
 import {
-    lightBase,
     accent2,
-    nuetral,
     fontFamily,
     h5Size,
+    lightBase,
     mqLarge,
     mqMedium,
     mqSmall,
     mqXlarge,
     mqXsmall,
-    mqXxlarge
-  } from "../styles/index";
-  import styled from "styled-components";
-  
-  export const Wrapper = styled.div`
+    mqXxlarge,
+    nuetral
+} from "../styles/index";
+
+import styled from "styled-components";
+
+export const Wrapper = styled.div`
     position: relative;
   `;
   
   export const MorePanel = styled.div`
     width: 100%;
-    height: 800px;
+    height: 200px;
     position: absolute;
-    top: 0;
+    top: 600;
     left: 0;
     bottom: 0;
     right: 0;
@@ -31,7 +32,7 @@ import {
   export const MoreButtonContainer = styled.div`
     display: flex;
     justify-content: center;
-    padding-top: 80px;
+
   `;
   export const MoreButton = styled.button`
     background-color: transparent;
