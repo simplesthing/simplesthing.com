@@ -17,12 +17,11 @@ export default function Home() {
       </h1>
       <section>
         <h2 id="about">about</h2>
-        <p>I like to think of what I do as a mix between a digital seamstress and a teacher of human as a second lanaguge. Coding for interactivity
-          has always spoken to my heart, experiments in the evolving creation of new mediums for communication during my lifetime, I am here for this.
+        <p>I like to think of what I do as a mix between a digital seamstress and a student-teacher of human as a second lanaguge.
           I am a software engineer that specializes in the presentation layer, the presumbably human, user interface between the hardware and the software.
         </p>
         <DefaultMarginTop />
-        <p>Over the years I have worked with different application stacks, versioning and design systems, project management techniques, coding frameworks and styles
+        <p>Over the years I have worked with different application stacks, code versioning tools, design systems, project management techniques, cloud providers and asset pipelines,
           but most importantly with many different people. Involvement in community and critically thinking of ways to improve how we work with one another is just as important to me as writing code.
         </p>
         <DefaultMarginTop />

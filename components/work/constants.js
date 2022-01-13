@@ -124,7 +124,8 @@ export const PLAYLIST = [
     icons: [solana, github],
     background:
       "url(/images/play/metaplex.png) center center",
-    external: false
+    external: false,
+    path: "/play/solana",
   },
   {
     title: "Sansar Scripts",
@@ -184,7 +185,7 @@ export const WORK_HISTORY = [
     icons: [aws, node, react, styledComponents],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/sansar-home-2019-rebrand.jpg) left center",
-    path: "https://sansar.com",
+    path: "work/sansar-web",
     external: true
   },
   {
@@ -193,6 +194,7 @@ export const WORK_HISTORY = [
     icons: [angular, d3, sass, gulp],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/bootcamp.png)",
+    path: "/work/apollo"
   },
   {
     title: "Amazon",
@@ -201,6 +203,7 @@ export const WORK_HISTORY = [
     icons: [perl, html, jquery, css, html],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/amazon.png) left top",
+    path: "/work/amazon",
   },
   {
     title: "Nordstrom",
@@ -209,6 +212,7 @@ export const WORK_HISTORY = [
     icons: [php, jquery, html, css],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/nordstrom.png)",
+    path: "/work/nordstrom",
   },
   {
     title: "Disney",
@@ -216,6 +220,7 @@ export const WORK_HISTORY = [
     icons: [ember, xmpp, css, html],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/disney-chat.png)",
+    path: "/work/disney"
   },
   {
     title: "Real Networks",
@@ -224,5 +229,6 @@ export const WORK_HISTORY = [
     icons: [jsp, jquery, flash],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/superpass+screen.jpg) left top",
+    path: "/work/real"
   },
 ];
