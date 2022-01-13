@@ -23,7 +23,7 @@ const Disney = () => {
 
             <P>
                 Contract developer for the social team at Disney Interactive in Redmond.
-                I built widgets that could be embedded onto webpages or overlayed on top of game client UI for various Disney Flash/Lua games.
+                I built widgets that could be embedded onto webpages or an overlay on top of game client UI for various Disney Flash/Lua games.
                 This was the first time I used MVC style JavaScript, AMD modules with require.js and even Ember before it&apos;s first stable release.
             </P>
 

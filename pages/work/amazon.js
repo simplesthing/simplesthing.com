@@ -21,7 +21,7 @@ const Amazon = () => {
 
             <P>
                 I contracted for a year with Amazon Creative Services making interactive widgets for the retail site. At the start
-                there were four UX designers and myself, the first developer hired on the UX team in an experiemnt to mix developers and designers on the same team for faster iterations.
+                there were four UX designers and myself, the first developer hired on the UX team in an experiment to mix developers and designers on the same team for faster iterations.
                 Two of the designers wrote HTML, CSS and some JavaScript. I focused on making their functional prototypes fully dynamic by connecting them to Amazon
                 back end services for data queries based on user purchase history using PERL mason and jQuery.
                 This was the first time a non development team had made interactive widgets for the retail site.

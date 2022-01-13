@@ -42,7 +42,7 @@ const Apollo = () => {
 
             <P>
                 I was tasked with a design that was modeled after transitions in a video.
-                When clciked a section of the screen would open up with a slight bit of parallax shifting of overlapping images.
+                When clicked a section of the screen would open up with a slight bit of parallax shifting of overlapping images.
                 Performance and frame rate were the biggest challenges to achieve smooth transitions.
             </P>
             <DefaultMarginTop />
@@ -56,7 +56,7 @@ const Apollo = () => {
             <h2>Analytics dashboard</h2>
 
             <P>
-                After the main bootcamp application was completed I built the frontend of a small analytics dashboard for colleges to gauge usage and student progress using Angular and D3 libraries.
+                After the main Bootcamp application was completed I built the frontend of a small analytics dashboard for colleges to gauge usage and student progress using Angular and D3 libraries.
             </P>
             <DefaultMarginTop />
             <Image src={`${imgPath}dashboard/overview.png`} width={pWidth} height={pHeight} alt="Porch mobile app" />
