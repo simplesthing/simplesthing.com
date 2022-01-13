@@ -1,15 +1,14 @@
+import { Grid, Icon, InfoContainer, InfoIcons, InfoTitle, Item, TintedGlass, Title, Wrapper } from "./work.style";
 
-import { useState } from "react";
 import Link from "next/link";
-import { WORK_HISTORY } from "./constants";
-import { Wrapper, MorePanel, MoreButtonContainer, MoreButton, Grid, Item, TintedGlass, InfoContainer, InfoTitle, InfoIcons, Title, Icon } from "./work.style";
+import { useState } from "react";
 
-const Work = () => {
-  const [showMore, setShowMore] = useState(true);
+const Work = ({ list }) => {
+  const [showMore] = useState(false);
   return (
     <Wrapper>
       <Grid more={!showMore}>
-        {WORK_HISTORY.map((item) => {
+        {!!list && list.map((item) => {
           const Card = (
             <Item background={item.background} key={item.title}>
               <TintedGlass >
@@ -43,18 +42,7 @@ const Work = () => {
         }
         )}
       </Grid>
-      {showMore && <MorePanel>
-        <MoreButtonContainer>
-          <MoreButton onClick={() =>  setShowMore(false)}>see more</MoreButton>
-        </MoreButtonContainer>
-      </MorePanel>
-      }
-      {!showMore && 
-        <MoreButtonContainer>
-          <MoreButton onClick={() =>  setShowMore(true)}>see less</MoreButton>
-        </MoreButtonContainer>
-    
-      }
+
     </Wrapper>
   );
 };

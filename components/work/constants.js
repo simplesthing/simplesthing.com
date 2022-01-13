@@ -99,17 +99,67 @@ const flash = {
   url: "https://simplesthings.s3-us-west-2.amazonaws.com/flashLogo100x.png",
   title: "Flash",
 };
+const rn_firebase = {
+  url: "/images/react-native-firebase.png",
+  title: "React Native Firebase",
+};
+const solana = {
+  url: "/images/solana.png",
+  title: "Solana",
+};
+
+export const PLAYLIST = [
+  {
+    title: "Tarot",
+    description: "React, React Native and React Native Web shared component monorepo app.",
+    icons: [react, expo, rn_firebase],
+    background:
+      "url(/images/play/tarot/tarot_account_ipad.jpg) center top",
+    path: "/play/tarot",
+    external: false
+  },
+  {
+    title: "Solana",
+    description: "Deep dive into Solana blockchain.",
+    icons: [solana, github],
+    background:
+      "url(/images/play/metaplex.png) center center",
+    external: false
+  },
+  {
+    title: "Sansar Scripts",
+    description:
+      "Image taken from video stream of Sansar Scripting Office Hours, and event to teach interactive scripting for the sansar game engine.",
+    icons: [cSharp, sansar, github],
+    background:
+      "url(https://simplesthings.s3-us-west-2.amazonaws.com/office+hours.jpg) left bottom",
+    path: "https://simplesthing.github.io/sansar-creator-resources/",
+    external: true
+  },
+  {
+    title: "SFJS",
+    description:
+      "Logo for Seattle Feminist JS, a meetup group to teach JavaScript and specifically react.js to women for free.",
+    icons: [react, webpack, github],
+    background:
+      "url(https://simplesthings.s3-us-west-2.amazonaws.com/SFJS.jpg) center center",
+    path: "https://seattlefeministjs.github.io/",
+    external: true
+  },
+
+];
 
 
 export const WORK_HISTORY = [
   {
-    title: "Porch Mobile",
+    title: "Porch Group",
     description:
       "Moving, improving, and everything in between. Porch makes moving, insurance, and improving your home, simple.",
     icons: [react, expo, jest],
     background:
-      "url(\"/images/work/porch/porch-logo-standard.png\") center center"
-  }, 
+      "url(\"/images/work/porch/porch-app-stores.png\") center center",
+    path: "/work/porch"
+  },
   {
     title: "Sansar Mobile",
     description:
@@ -118,7 +168,7 @@ export const WORK_HISTORY = [
     background:
       "url(\"/images/work/sansar/mobile/iphone-screenshots.png\") center center",
     path: "/work/sansar-mobile"
-  }, 
+  },
   {
     title: "Sansar Client",
     description:
@@ -134,28 +184,8 @@ export const WORK_HISTORY = [
     icons: [aws, node, react, styledComponents],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/sansar-home-2019-rebrand.jpg) left center",
-      path: "https://sansar.com",
-      external:true
-  },
-  {
-    title: "Sansar Scripts",
-    description:
-      "Image taken from video stream of Sansar Scripting Office Hours, and event to teach interactive scripting for the sansar game engine.",
-    icons: [cSharp, sansar, github],
-    background:
-      "url(https://simplesthings.s3-us-west-2.amazonaws.com/office+hours.jpg) left bottom",
-      path: "https://simplesthing.github.io/sansar-creator-resources/",
-      external: true
-  },
-  {
-    title: "SFJS",
-    description:
-      "Logo for Seattle Feminist JS, a meetup group to teach JavaScript and specifically react.js to women for free.",
-    icons: [react, webpack, github],
-    background:
-      "url(https://simplesthings.s3-us-west-2.amazonaws.com/SFJS.jpg) center center",
-      path: "https://seattlefeministjs.github.io/",
-      external: true
+    path: "https://sansar.com",
+    external: true
   },
   {
     title: "Apollo",
