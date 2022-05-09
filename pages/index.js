@@ -17,17 +17,17 @@ export default function Home() {
       </h1>
       <section>
         <h2 id="about">about</h2>
-        <p>I like to think of what I do as a mix between a digital seamstress and a student-teacher of human as a second lanaguge.
-          I am a software engineer that specializes in the presentation layer, the presumbably human, user interface between the hardware and the software.
+        <p>I like to think of what I do as a mix between a digital seamstress and a student-teacher of human as a second language.
+          I am a software engineer that specializes in the presentation layer, the presumably human, user interface between the hardware and the software.
+          <DefaultMarginTop />
+          Effective interfacing with humans is complex, there are many ways to achieve seemingly similar results each with their own complications and recipes for consistency while scaling.
+          The evolution of any interface begins and ends with simplicity.
+          <DefaultMarginTop />
+          Nature shows us something as simple as polarity, positive and negative, these two simple poles of energy generate an electric charge capable of coalescing and bonding atoms into matter, a.k.a. the material world and everything in it.
+          So simple yet so complex, this is what humans want while coding and using computers, simple easy to understand abstractions that are capable of composing complex systems with the greatest amount of flexibility.
+          <DefaultMarginTop />
+          This is what I have spent over a decade analyzing and implementing over and over and over again, its &apos;my thing&apos;, you can call me Simples.
         </p>
-        <DefaultMarginTop />
-        <p>Over the years I have worked with different application stacks, code versioning tools, design systems, project management techniques, cloud providers and asset pipelines,
-          but most importantly with many different people. Involvement in community and critically thinking of ways to improve how we work with one another is just as important to me as writing code.
-        </p>
-        <DefaultMarginTop />
-        <p>
-          Our understanding of ourselves affects our products and how we make them. Our products affect the humans that use them. When we make an effort to consciously include all living beings and to practice empathy we
-          lead the way to making better selves, products, workplaces and a better world for all.</p>
       </section>
       <section>
         <h2 id="work">work</h2>

@@ -29,7 +29,7 @@ const Amazon = () => {
 
             <h2>Discover new music</h2>
 
-            <video controls="controls" autoPlay="autoplay" poster={`${imgPath}discover-new-music.files/html5video/DNM-screencast2.jpg`} style={{ width: "100%" }} title="DNM-screencast2" loop="loop" >
+            <video controls="controls" poster={`${imgPath}discover-new-music.files/html5video/DNM-screencast2.jpg`} style={{ width: "100%" }} title="DNM-screencast2" loop="loop" >
                 <source src={`${imgPath}discover-new-music.files/html5video/DNM-screencast2.m4v`} type="video/mp4" />
                 <source src={`${imgPath}discover-new-music.files/html5video/DNM-screencast2.webm`} type="video/webm" />
                 <source src={`${imgPath}discover-new-music.files/html5video/DNM-screencast2.ogv`} type="video/ogg" />
@@ -43,7 +43,7 @@ const Amazon = () => {
 
             <h2>Hero slider</h2>
 
-            <video controls="controls" autoPlay="autoplay" poster={`${imgPath}hero-slider-jp.files/html5video/hero-slider-jp.jpg`} style={{ width: "100%" }} title="hero-slider-jp" loop="loop" >
+            <video controls="controls" poster={`${imgPath}hero-slider-jp.files/html5video/hero-slider-jp.jpg`} style={{ width: "100%" }} title="hero-slider-jp" loop="loop" >
                 <source src={`${imgPath}hero-slider-jp.files/html5video/hero-slider-jp.m4v`} type="video/mp4" />
                 <source src={`${imgPath}hero-slider-jp.files/html5video/hero-slider-jp.webm`} type="video/webm" />
                 <source src={`${imgPath}hero-slider-jp.files/html5video/hero-slider-jp.ogv`} type="video/ogg" />
@@ -57,7 +57,7 @@ const Amazon = () => {
             </P>
 
             <h2>Digital games</h2>
-            <video controls="controls" autoPlay="autoplay" poster={`${imgPath}digital-games.files/html5video/digital-games-page.jpg`} style={{ width: "100%" }} title="digital-games-page" loop="loop" onended="var v=this;setTimeout(function(){v.play()},300)">
+            <video controls="controls" poster={`${imgPath}digital-games.files/html5video/digital-games-page.jpg`} style={{ width: "100%" }} title="digital-games-page" loop="loop" onended="var v=this;setTimeout(function(){v.play()},300)">
                 <source src={`${imgPath}digital-games.files/html5video/digital-games-page.m4v`} type="video/mp4" />
                 <source src={`${imgPath}digital-games.files/html5video/digital-games-page.webm`} type="video/webm" />
                 <source src={`${imgPath}digital-games.files/html5video/digital-games-page.ogv`} type="video/ogg" />
