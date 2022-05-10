@@ -77,6 +77,7 @@ export const globalCss = `
     font-family: ${fontFamily};
     font-size: calc(${fontSizeBase} * 1.45);
     line-height: ${fontLineHeightBase * 1.2};
+    margin: 0 2%;
     @media ${mqMedium} {
       font-size: calc(${fontSizeBase} * 1);
       line-height: calc(${fontLineHeightBase} * 1.2);

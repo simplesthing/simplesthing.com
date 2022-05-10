@@ -1,15 +1,10 @@
+import BackToHome from "../../components/back-to-home";
+import { DefaultMarginTop } from "../../components/styles/utilities";
+import Head from "next/head";
+import Image from "next/image";
+import Layout from "../../components/layout";
 import styled from "styled-components";
 import useWindowSize from "../../hooks/use-window-size";
-import Layout from "../../components/layout";
-import { lightBase } from "../../components/styles/index";
-import Image from "next/image";
-import Head from "next/head";
-import { DefaultMarginTop } from "../../components/styles/utilities";
-
-
-const P = styled.p`
-  color: ${lightBase};
-`;
 
 const Section = styled.div`
     margin-top: 1.5rem;
@@ -38,14 +33,18 @@ const SansarMobile = () => {
             <Head>
                 <title>sansar mobile | simplesthing</title>
             </Head>
+            <BackToHome anchor="#sansar-mobile" />
             <h1> Sansar mobile</h1>
-            <P>
-                The Sansar mobile app is an extension of the Sansar virtual events platform, a destination for innovative live events on PC and VR.</P>
+            <p>
+                The Sansar mobile app is an extension of the Sansar virtual events platform, a destination for innovative live events on PC and VR.</p>
 
             <DefaultMarginTop />
-            <P>In a short span of three months I rallied to design build and launch the Sansar mobile app with React Native.
+            <p>In a short span of three months I rallied to design build and launch the Sansar mobile app with React Native.
                 Working towards a concert date of July 4th weekend for the Glastonbury virtual Shangri - La festival, Lost Horizons.
-                It was my first opportunity to lead a product vision from conception to release. It wasn&apos;t perfect but it shipped on time and everyone enjoyed the show!</P>
+                It was my first opportunity to lead a product vision from conception to release. It wasn&apos;t perfect but it shipped on time and everyone enjoyed the show!</p>
+            <br />
+            <p>What was it like inside Sansar you ask? Check out a bit of Fatboy Slim&apos; set (guess who I am)  -&gt; <a href="https://simplesthings.s3.us-west-2.amazonaws.com/2020-07-04+17-42-26.mp4" target="_blank" rel="noreferrer">Lost Horizon recording from inside Sansar</a></p>
+
             <Section>
                 <h2>Design</h2>
                 <Spread>
@@ -75,14 +74,14 @@ const SansarMobile = () => {
                         <PaddedImg>
                             <Image src={`${imgPath}ipad-screenshots.png`} width={pWidth} height={pHeight} alt="iPad screenshots" />
                         </PaddedImg>
-                      <Spread>
-                      <PaddedImg>
-                            <Image src={`${imgPath}event-list.png`} width={pHeight / 1.5} height={pHeight} alt="Event list" />
-                        </PaddedImg>
-                        <PaddedImg>
-                            <Image src={`${imgPath}app_side_nav.png`} width={pHeight / 1.5} height={pHeight} alt="App side navigation" />
-                        </PaddedImg>
-                      </Spread>
+                        <Spread>
+                            <PaddedImg>
+                                <Image src={`${imgPath}event-list.png`} width={pHeight / 1.5} height={pHeight} alt="Event list" />
+                            </PaddedImg>
+                            <PaddedImg>
+                                <Image src={`${imgPath}app_side_nav.png`} width={pHeight / 1.5} height={pHeight} alt="App side navigation" />
+                            </PaddedImg>
+                        </Spread>
                     </div>
                     <div>
                         <PaddedImg>
@@ -94,7 +93,6 @@ const SansarMobile = () => {
                     </div>
                 </Spread>
 
-                <a href="https://simplesthings.s3.us-west-2.amazonaws.com/2020-07-04+17-42-26.mp4" target="_blank" rel="noreferrer">Lost Horizons recording from inside Sansar</a>
             </Section>
             <Section>
                 <h2>Ticket sales</h2>
@@ -126,7 +124,7 @@ const SansarMobile = () => {
                     </PaddedImg>
                 </Spread>
             </Section>
-           
+            <BackToHome anchor="#sansar-mobile" />
         </Layout>
     );
 };
