@@ -21,10 +21,7 @@ export default function Home() {
           I am a software engineer that specializes in the presentation layer, the presumably human, user interface between the hardware and the software.
           <DefaultMarginTop />
           Effective interfacing with humans is complex, there are many ways to achieve seemingly similar results each with their own complications and recipes for consistency while scaling.
-          The evolution of any interface begins and ends with simplicity.
-          <DefaultMarginTop />
-          Nature shows us something as simple as polarity, positive and negative, these two simple poles of energy generate an electric charge capable of coalescing and bonding atoms into matter, a.k.a. the material world and everything in it.
-          So simple yet so complex, this is what humans want while coding and using computers, simple easy to understand abstractions that are capable of composing complex systems.
+          The evolution of any interface begins and ends with simplicity, simple easy to understand abstractions that are capable of composing complex systems.
           <DefaultMarginTop />
           This is what I have spent over a decade analyzing and implementing over and over and over again, its &apos;my thing&apos;, you can call me Simples.
         </p>
