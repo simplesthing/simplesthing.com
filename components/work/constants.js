@@ -116,6 +116,7 @@ export const PLAYLIST = [
     background:
       "url(/images/play/federated-screenshot.png) center top",
     path: "/play/federated",
+    anchor: "federated",
     external: false
   },
   {
@@ -125,6 +126,7 @@ export const PLAYLIST = [
     background:
       "url(/images/play/tarot/tarot_account_ipad.jpg) center top",
     path: "/play/tarot",
+    anchor: "tarot",
     external: false
   },
   {
@@ -135,6 +137,7 @@ export const PLAYLIST = [
       "url(/images/play/metaplex.png) center center",
     external: false,
     path: "/play/solana",
+    anchor: "solana"
   },
   {
     title: "Sansar Scripts",
@@ -144,6 +147,7 @@ export const PLAYLIST = [
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/office+hours.jpg) left bottom",
     path: "https://simplesthing.github.io/sansar-creator-resources/",
+    anchor: "sansar-scripts",
     external: true
   },
   {
@@ -154,6 +158,7 @@ export const PLAYLIST = [
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/SFJS.jpg) center center",
     path: "https://seattlefeministjs.github.io/",
+    anchor: "SFJS",
     external: true
   },
 
@@ -168,7 +173,8 @@ export const WORK_HISTORY = [
     icons: [react, expo, jest],
     background:
       "url(\"/images/work/porch/porch-app-stores.png\") center center",
-    path: "/work/porch"
+    path: "/work/porch",
+    anchor: "porch"
   },
   {
     title: "Sansar Mobile",
@@ -177,7 +183,8 @@ export const WORK_HISTORY = [
     icons: [react, expo, jest],
     background:
       "url(\"/images/work/sansar/mobile/iphone-screenshots.png\") center center",
-    path: "/work/sansar-mobile"
+    path: "/work/sansar-mobile",
+    anchor: "sansar-mobile"
   },
   {
     title: "Sansar Client",
@@ -186,7 +193,8 @@ export const WORK_HISTORY = [
     icons: [cSharp, cPp, xaml],
     background:
       "url(\"https://simplesthings.s3-us-west-2.amazonaws.com/vr-panel.jpg\") center 10%",
-    path: "/work/sansar-client"
+    path: "/work/sansar-client",
+    anchor: "sansar"
   },
   {
     title: "Sansar Web",
@@ -195,7 +203,7 @@ export const WORK_HISTORY = [
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/sansar-home-2019-rebrand.jpg) left center",
     path: "work/sansar-web",
-    external: true
+    anchor: "sansar-web",
   },
 
   {
@@ -204,7 +212,8 @@ export const WORK_HISTORY = [
     icons: [angular, d3, sass, gulp],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/bootcamp.png)",
-    path: "/work/apollo"
+    path: "/work/apollo",
+    anchor: "apollo"
   },
   {
     title: "Amazon",
@@ -214,6 +223,7 @@ export const WORK_HISTORY = [
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/amazon.png) left top",
     path: "/work/amazon",
+    anchor: "amazon"
   },
   {
     title: "Nordstrom",
@@ -223,6 +233,7 @@ export const WORK_HISTORY = [
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/nordstrom.png)",
     path: "/work/nordstrom",
+    anchor: "nordstrom"
   },
   {
     title: "Disney",
@@ -230,7 +241,8 @@ export const WORK_HISTORY = [
     icons: [ember, xmpp, css, html],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/disney-chat.png)",
-    path: "/work/disney"
+    path: "/work/disney",
+    anchor: "disney"
   },
   {
     title: "Real Networks",
@@ -239,6 +251,7 @@ export const WORK_HISTORY = [
     icons: [jsp, jquery, flash],
     background:
       "url(https://simplesthings.s3-us-west-2.amazonaws.com/superpass+screen.jpg) left top",
-    path: "/work/real"
+    path: "/work/real",
+    anchor: "real-networks"
   },
 ];

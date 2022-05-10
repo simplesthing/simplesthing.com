@@ -1,15 +1,10 @@
+import BackToHome from "../../components/back-to-home";
+import { DefaultMarginTop } from "../../components/styles/utilities";
+import Head from "next/head";
+import Image from "next/image";
+import Layout from "../../components/layout";
 import styled from "styled-components";
 import useWindowSize from "../../hooks/use-window-size";
-import Layout from "../../components/layout";
-import { lightBase } from "../../components/styles/index";
-import Image from "next/image";
-import Head from "next/head";
-import { DefaultMarginTop } from "../../components/styles/utilities";
-
-
-const P = styled.p`
-  color: ${lightBase};
-`;
 
 const Section = styled.div`
     margin-top: 1.5rem;
@@ -37,14 +32,15 @@ const Sansar = () => {
             <Head>
                 <title>sansar client | simplesthing</title>
             </Head>
+            <BackToHome anchor="#sansar" />
             <h1> Sansar client</h1>
-            <P>Sansar PC game client UI built using a C++ implementation of XAML called Noesis Engine. Every interaction and rendering effect had to be added manually, 
-                there was nothing &quot;out of the box.&quot;</P>
-            <DefaultMarginTop/>
-            <P>I spent a little over one year working in a completely different environment from JavaScript. With the right amount of hand holding and freedom 
+            <p>Sansar PC game client UI built using a C++ implementation of XAML called Noesis Engine. Every interaction and rendering effect had to be added manually,
+                there was nothing &quot;out of the box.&quot;</p>
+            <DefaultMarginTop />
+            <p>I spent a little over one year working in a completely different environment from JavaScript. With the right amount of hand holding and freedom
                 I was able to transfer all of my experience building web applications to the game client. I introduced a more a modular style of coding to the UI code base,
                 and started working on extending functionality with view properties and shared variables.
-            </P>
+            </p>
 
 
             <Section>
@@ -92,6 +88,7 @@ const Sansar = () => {
                 <PaddedImg src={`${imgPath}client-notifications.png`} width={imgWidth} height={imgHeight2} alt="Sansar in game notifications badges" />
             </Section>
             <Section />
+            <BackToHome anchor="#sansar" />
         </Layout>
     );
 };

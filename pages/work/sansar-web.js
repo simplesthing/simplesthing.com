@@ -1,15 +1,9 @@
+import BackToHome from "../../components/back-to-home";
 import { DefaultMarginTop } from "../../components/styles/utilities";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "../../components/layout";
-import { lightBase } from "../../components/styles/index";
-import styled from "styled-components";
 import useWindowSize from "../../hooks/use-window-size";
-
-const P = styled.p`
-  color: ${lightBase};
-`;
-
 
 const SansarWeb = () => {
     const { width } = useWindowSize();
@@ -40,14 +34,14 @@ const SansarWeb = () => {
             <Head>
                 <title>sansar web | simplesthing</title>
             </Head>
+            <BackToHome anchor="#sansar-web" />
             <h1>Sansar web</h1>
 
-            <P>
-                This was the very begining, before Sansar even had a name.
-                I vetted and demonstrated React as a new frontend library that had signifigant advantages over Angular at the time. It was a solid choice agreed to by the
-                rest of the web team. I implemented CSS modules and worked with the UX designer to create base theme variables and component styles.
+            <p>
+                Vetted and demonstrated React as a new frontend library that had significant advantages over Angular at the time. It was a solid choice agreed to by the
+                rest of the web team. Implemented CSS modules and worked with the UX designer to create base theme variables and component styles. At some point moved the CSS components to styled components for react.
                 I must have re-skinned the sansar website, and all of it&apos;s many subdomains and landing pages about a hundred times before it&apos;s final iterations at Linden Lab.
-            </P>
+            </p>
             <DefaultMarginTop />
             <div
                 style={{
@@ -59,9 +53,7 @@ const SansarWeb = () => {
                 <Image src={`${imgPath}creator-preview.png`} width={iWidth} height={iHeight} alt="Sansar creator preview signup form" />
             </div>
             <DefaultMarginTop />
-            <P>
 
-            </P>
 
             <h2>Atlas</h2>
 
@@ -134,7 +126,7 @@ const SansarWeb = () => {
                 <Image src={`${imgPath}landing-v1.png`} width={l1Width} height={l1Height} alt="Sansar homepage" /> &nbsp;&nbsp;
                 <Image src={`${imgPath}landing-4.jpg`} width={l2Width} height={l2Height} alt="Sansar homepage" />
             </div>
-
+            <BackToHome anchor="#sansar-web" />
         </Layout>
     );
 };

@@ -1,10 +1,10 @@
 import { Layout as Container, accent1, mqSmall } from "./styles/index";
-import dynamic from "next/dynamic";
+
 import Head from "next/head";
 import Link from "next/link";
-import styled from "styled-components";
 import ProfilePic from "./profile-pic";
-import BackToHome from "./back-to-home";
+import dynamic from "next/dynamic";
+import styled from "styled-components";
 
 const Header = styled.div`
     display: flex;
@@ -54,14 +54,9 @@ export default function Layout({ children, home }) {
       </Header>
     )
     }
-    {!home && (
-      <BackToHome />
-    )}
+
     <Container>{children}</Container>
 
-    {!home && (
-      <BackToHome/>
-    )}
 
   </>;
 }

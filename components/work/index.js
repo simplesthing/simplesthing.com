@@ -10,7 +10,7 @@ const Work = ({ list }) => {
       <Grid more={!showMore}>
         {!!list && list.map((item) => {
           const Card = (
-            <Item background={item.background} key={item.title}>
+            <Item background={item.background} key={item.title} id={item.anchor}>
               <TintedGlass >
                 <InfoContainer>
                   <InfoTitle>

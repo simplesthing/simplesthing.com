@@ -1,16 +1,9 @@
+import BackToHome from "../../components/back-to-home";
 import { DefaultMarginTop } from "../../components/styles/utilities";
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "../../components/layout";
-import { lightBase } from "../../components/styles/index";
-import styled from "styled-components";
 import useWindowSize from "../../hooks/use-window-size";
-
-const P = styled.p`
-  color: ${lightBase};
-`;
-
-
 const Nordstrom = () => {
     const { width } = useWindowSize();
     const imgPath = "/images/work/nordstrom/";
@@ -24,12 +17,13 @@ const Nordstrom = () => {
             <Head>
                 <title>nordstrom | simplesthing</title>
             </Head>
+            <BackToHome anchor="#nordstrom" />
             <h1>Nordstrom</h1>
 
-            <P>
+            <p>
                 During my time at Nordstrom I built interactive widgets for the retail site as a main staple but I also got the opportunity  to work with the creative department, putting
                 my WordPress theming skills to work. I themed their single blog at the time, The Thread, with the Thesis SEO theme and helped them launch four new blogs with using that same theme.
-            </P>
+            </p>
             <DefaultMarginTop />
             <div
                 style={{
@@ -61,11 +55,12 @@ const Nordstrom = () => {
             </div>
 
             <h2>Prototyping</h2>
-            <P>Another large part of my job was building high fidelity prototypes for the UX team.
+            <p>Another large part of my job was building high fidelity prototypes for the UX team.
                 The prototypes were then used during usability testing with actual customers.
-                I learned a lot from the experience of watching the customers react to things like infinite scrolling and parallax scrolling.</P>
+                I learned a lot from the experience of watching the customers react to things like infinite scrolling and parallax scrolling.</p>
             <DefaultMarginTop />
             <Image src={`${imgPath}view-all.png`} width={pWidth} height={pHeight} alt="Nordstrom mens blog" />
+            <BackToHome anchor="#nordstrom" />
         </Layout>
     );
 };

@@ -8,7 +8,7 @@ const BackToHomeStyle = styled.div`
 const HOME = process.env.VERCEL_ENV === "development" ? process.env.VERCEL_URL : "https://www.simplesthing.com/";
 
 
-const BackToHome = (anchor) => {
+const BackToHome = ({ anchor = "" }) => {
   return (
     <BackToHomeStyle>
       <Link href={`${HOME}${anchor}`}>
