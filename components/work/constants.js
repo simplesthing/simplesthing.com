@@ -110,6 +110,15 @@ const solana = {
 
 export const PLAYLIST = [
   {
+    title: "Federated Modules",
+    description: "React, React Native and React Native Web shared component monorepo app.",
+    icons: [webpack, react],
+    background:
+      "url(/images/play/federated-screenshot.png) center top",
+    path: "/play/federated",
+    external: false
+  },
+  {
     title: "Tarot",
     description: "React, React Native and React Native Web shared component monorepo app.",
     icons: [react, expo, rn_firebase],

@@ -17,13 +17,11 @@ export default function Home() {
       </h1>
       <section>
         <h2 id="about">about</h2>
-        <p>I like to think of what I do as a mix between a digital seamstress and a student-teacher of human as a second language.
-          I am a software engineer that specializes in the presentation layer, the presumably human, user interface between the hardware and the software.
+        <p>I am a software engineer that specializes in the presentation layer, the mostly visual, sometimes audible or haptic, user interface between the hardware and the software.
+          Effective interfacing with humans is complex, there are many ways to achieve seemingly similar results, each with their own complications and recipes for consistency while scaling fast.
           <DefaultMarginTop />
-          Effective interfacing with humans is complex, there are many ways to achieve seemingly similar results each with their own complications and recipes for consistency while scaling.
-          The evolution of any interface begins and ends with simplicity, simple easy to understand abstractions that are capable of composing complex systems.
-          <DefaultMarginTop />
-          This is what I have spent over a decade analyzing and implementing over and over and over again, its &apos;my thing&apos;, you can call me Simples.
+          The evolution of any interface begins and ends with simplicity. Simple easy to understand abstractions that are capable of composing unique and complex systems.
+          This is what I have spent over a decade analyzing and implementing over and over and over again, its my &apos;thing&apos;.
         </p>
       </section>
       <section>

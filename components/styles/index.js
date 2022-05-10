@@ -47,9 +47,9 @@ export const marginBase = "4%";
 export const Layout = styled.main`
   background: ${base};
   height: 100%;
-  margin: 0 2%;
+  margin: 0 3%;
   @media ${mqSmall} {
-    margin: 0 4%;
+    margin: 0 6%;
   }
   @media ${mqMedium} {
     margin: 0 8%;
@@ -75,20 +75,20 @@ export const globalCss = `
   p {
     color: ${lightBase};
     font-family: ${fontFamily};
-    font-size: ${fontSizeBase};
-    line-height: ${fontLineHeightBase};
+    font-size: calc(${fontSizeBase} * 1.45);
+    line-height: ${fontLineHeightBase * 1.2};
     @media ${mqMedium} {
-      font-size: calc(${fontSizeBase} * 1.2);
+      font-size: calc(${fontSizeBase} * 1);
       line-height: calc(${fontLineHeightBase} * 1.2);
     }
     @media ${mqLarge} {
-      font-size: calc(${fontSizeBase} * 1.3);
+      font-size: calc(${fontSizeBase} * 1.25);
     }
     @media ${mqXlarge} {
-      font-size: calc(${fontSizeBase} * 1.4);
+      font-size: calc(${fontSizeBase} * 1.35);
     }
     @media ${mqXxlarge} {
-      font-size: calc(${fontSizeBase} * 1.6);
+      font-size: calc(${fontSizeBase} * 1.45);
     }
   }
 
@@ -108,11 +108,15 @@ export const globalCss = `
   }
   h1 {
     font-size: ${h1Size};
-    @media ${mqMedium} {
-    }
   }
   h2 {
-    font-size: ${h2Size};
+    font-size: ${h1Size};
+    @media ${mqMedium} {
+      font-size: ${h2Size};
+    }
+    @media ${mqLarge} {
+      font-size: ${h1Size};
+    }
   }
   h3 {
     font-size: ${h3Size};

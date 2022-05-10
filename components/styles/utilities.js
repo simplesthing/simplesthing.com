@@ -1,6 +1,7 @@
-import styled from "styled-components";
 import Image from "next/image";
 import { accent2 } from ".";
+import styled from "styled-components";
+
 export const BorderCircle = styled(Image)`
     border-radius: 9999px;
     border: solid;
@@ -8,7 +9,7 @@ export const BorderCircle = styled(Image)`
     border-color: ${accent2};
   `;
 
-  export const DefaultMarginTop = styled.span`
+export const DefaultMarginTop = styled.span`
     display: block;
     margin-top: 1rem;
   `;
