@@ -49,8 +49,8 @@ const SansarWeb = () => {
                     justifyContent: "center",
                 }}
             >
-                <Image src={`${imgPath}homepage1.png`} width={pWidth} height={pHeight} alt="Sansar creator preview" /> &nbsp;&nbsp;
-                <Image src={`${imgPath}creator-preview.png`} width={iWidth} height={iHeight} alt="Sansar creator preview signup form" />
+                <Image src={`${imgPath}homepage1.jpg`} width={pWidth} height={pHeight} alt="Sansar creator preview" /> &nbsp;&nbsp;
+                <Image src={`${imgPath}creator-preview.jpg`} width={iWidth} height={iHeight} alt="Sansar creator preview signup form" />
             </div>
             <DefaultMarginTop />
 
@@ -63,8 +63,8 @@ const SansarWeb = () => {
                     justifyContent: "center",
                 }}
             >
-                <Image src={`${imgPath}experience-page.png`} width={eWidth} height={eHeight} alt="Sansar experience page 1" />
-                <Image src={`${imgPath}experience1.png`} width={aWidth} height={aHeight} alt="Sansar experience page 2" />
+                <Image src={`${imgPath}experience-page.jpg`} width={eWidth} height={eHeight} alt="Sansar experience page 1" />
+                <Image src={`${imgPath}experience1.jpg`} width={aWidth} height={aHeight} alt="Sansar experience page 2" />
             </div>
 
             <div
@@ -73,12 +73,12 @@ const SansarWeb = () => {
                     justifyContent: "center",
                 }}
             >
-                <Image src={`${imgPath}atlas.png`} width={eWidth} height={eHeight} alt="Sansar experience page 1" />
-                <Image src={`${imgPath}atlas2.png`} width={eWidth} height={eHeight} alt="Sansar experience page 1" />
+                <Image src={`${imgPath}atlas.jpg`} width={eWidth} height={eHeight} alt="Sansar experience page 1" />
+                <Image src={`${imgPath}atlas2.jpg`} width={eWidth} height={eHeight} alt="Sansar experience page 1" />
 
             </div>
 
-            <Image src={`${imgPath}atlas3.png`} width={yWidth} height={yHeight} alt="Sansar experience page 1" />
+            <Image src={`${imgPath}atlas3.jpeg`} width={yWidth} height={yHeight} alt="Sansar experience page 1" />
 
             <h2>Store</h2>
 
@@ -89,7 +89,7 @@ const SansarWeb = () => {
                 }}
             >
                 <Image src={`${imgPath}store.jpg`} width={eWidth} height={eHeight} alt="Sansar store" /> &nbsp;&nbsp;
-                <Image src={`${imgPath}store-inventory.png`} width={aWidth} height={aHeight} alt="Sansar inventory" />
+                <Image src={`${imgPath}store-inventory.jpg`} width={aWidth} height={aHeight} alt="Sansar inventory" />
             </div>
 
             <DefaultMarginTop />
@@ -99,8 +99,8 @@ const SansarWeb = () => {
                     justifyContent: "center",
                 }}
             >
-                <Image src={`${imgPath}store-2.png`} width={aWidth} height={aHeight} alt="Sansar store" /> &nbsp;&nbsp;
-                <Image src={`${imgPath}edit-listing-error.png`} width={aWidth} height={aHeight} alt="Sansar edit listing" />
+                <Image src={`${imgPath}store-2.jpg`} width={aWidth} height={aHeight} alt="Sansar store" /> &nbsp;&nbsp;
+                <Image src={`${imgPath}edit-listing-error.jpg`} width={aWidth} height={aHeight} alt="Sansar edit listing" />
             </div>
 
             <h2>Profile</h2>
@@ -112,7 +112,7 @@ const SansarWeb = () => {
                 }}
             >
                 <Image src={`${imgPath}account2.jpg`} width={aWidth} height={aHeight} alt="Sansar store" /> &nbsp;&nbsp;
-                <Image src={`${imgPath}friends.png`} width={aWidth} height={aHeight} alt="Sansar edit listing" />
+                <Image src={`${imgPath}friends.jpg`} width={aWidth} height={aHeight} alt="Sansar edit listing" />
             </div>
 
             <h2>Homepage</h2>
@@ -123,7 +123,7 @@ const SansarWeb = () => {
                     justifyContent: "center",
                 }}
             >
-                <Image src={`${imgPath}landing-v1.png`} width={l1Width} height={l1Height} alt="Sansar homepage" /> &nbsp;&nbsp;
+                <Image src={`${imgPath}landing-v1.jpg`} width={l1Width} height={l1Height} alt="Sansar homepage" /> &nbsp;&nbsp;
                 <Image src={`${imgPath}landing-4.jpg`} width={l2Width} height={l2Height} alt="Sansar homepage" />
             </div>
             <BackToHome anchor="#sansar-web" />

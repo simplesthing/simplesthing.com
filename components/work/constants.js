@@ -110,6 +110,16 @@ const solana = {
 
 export const PLAYLIST = [
   {
+    title: "Ready Player Me",
+    description: "Ready Player Me Api + Model Viewer web component",
+    icons: [],
+    background:
+      "url(/images/play/rpm.jpg) right top",
+    path: "/play/rpm",
+    anchor: "federated",
+    external: false
+  },
+  {
     title: "Federated Modules",
     description: "React, React Native and React Native Web shared component monorepo app.",
     icons: [webpack, react],
@@ -182,7 +192,7 @@ export const WORK_HISTORY = [
       "The Sansar mobile app is an extension of the Sansar virtual events platform, a destination for innovative live events on PC and VR.",
     icons: [react, expo, jest],
     background:
-      "url(\"/images/work/sansar/mobile/iphone-screenshots.png\") center center",
+      "url(\"/images/work/sansar/mobile/iphone-screenshots.jpg\") center center",
     path: "/work/sansar-mobile",
     anchor: "sansar-mobile"
   },

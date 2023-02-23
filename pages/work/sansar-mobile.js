@@ -49,18 +49,18 @@ const SansarMobile = () => {
                 <h2>Design</h2>
                 <Spread>
                     <PaddedImg>
-                        <Image src={`${imgPath}first-mockup.png`} width={pWidth} height={pHeight} alt="Simple Flow for app pages, login, list, video" />
+                        <Image src={`${imgPath}first-mockup.jpg`} width={pWidth} height={pHeight} alt="Simple Flow for app pages, login, list, video" />
                     </PaddedImg>
                     <PaddedImg>
-                        <Image src={`${imgPath}first-mockup-cameras.png`} width={pWidth} height={pHeight} alt="Video player mockup" />
+                        <Image src={`${imgPath}first-mockup-cameras.jpg`} width={pWidth} height={pHeight} alt="Video player mockup" />
                     </PaddedImg>
                 </Spread>
                 <Spread>
                     <PaddedImg>
-                        <Image src={`${imgPath}video_mockup.png`} width={pWidth} height={pHeight} alt="Video player mockups" />
+                        <Image src={`${imgPath}video_mockup.jpg`} width={pWidth} height={pHeight} alt="Video player mockups" />
                     </PaddedImg>
                     <PaddedImg>
-                        <Image src={`${imgPath}video_mockup_chat.png`} width={pWidth} height={pHeight} alt="Vide player mockups with chat" />
+                        <Image src={`${imgPath}video_mockup_chat.jpg`} width={pWidth} height={pHeight} alt="Vide player mockups with chat" />
                     </PaddedImg>
                 </Spread>
             </Section>
@@ -68,27 +68,27 @@ const SansarMobile = () => {
                 <h2>Launch</h2>
                 <Spread>
                     <PaddedImg>
-                        <Image src={`${imgPath}lost-horizons-stages.png`} width={pHeight / 1.5} height={pHeight * 3} alt="Lost Horizons stages page" />
+                        <Image src={`${imgPath}lost-horizons-stages.jpg`} width={pHeight / 1.5} height={pHeight * 3} alt="Lost Horizons stages page" />
                     </PaddedImg>
                     <div>
                         <PaddedImg>
-                            <Image src={`${imgPath}ipad-screenshots.png`} width={pWidth} height={pHeight} alt="iPad screenshots" />
+                            <Image src={`${imgPath}ipad-screenshots.jpg`} width={pWidth} height={pHeight} alt="iPad screenshots" />
                         </PaddedImg>
                         <Spread>
                             <PaddedImg>
-                                <Image src={`${imgPath}event-list.png`} width={pHeight / 1.5} height={pHeight} alt="Event list" />
+                                <Image src={`${imgPath}event-list.jpg`} width={pHeight / 1.5} height={pHeight} alt="Event list" />
                             </PaddedImg>
                             <PaddedImg>
-                                <Image src={`${imgPath}app_side_nav.png`} width={pHeight / 1.5} height={pHeight} alt="App side navigation" />
+                                <Image src={`${imgPath}app_side_nav.jpg`} width={pHeight / 1.5} height={pHeight} alt="App side navigation" />
                             </PaddedImg>
                         </Spread>
                     </div>
                     <div>
                         <PaddedImg>
-                            <Image src={`${imgPath}login_landscape.png`} width={imgHeight} height={imgWidth / 1.5} alt="Login screen" />
+                            <Image src={`${imgPath}login_landscape.jpg`} width={imgHeight} height={imgWidth / 1.5} alt="Login screen" />
                         </PaddedImg>
                         <PaddedImg>
-                            <Image src={`${imgPath}live_cameras.png`} width={imgWidth} height={imgHeight * 1.5} alt="Live cameras at event" />
+                            <Image src={`${imgPath}live_cameras.jpg`} width={imgWidth} height={imgHeight * 1.5} alt="Live cameras at event" />
                         </PaddedImg>
                     </div>
                 </Spread>
@@ -98,10 +98,10 @@ const SansarMobile = () => {
                 <h2>Ticket sales</h2>
                 <Spread>
                     <PaddedImg>
-                        <Image src={`${imgPath}ticket_test.png`} width={pHeight} height={pWidth} alt="Buy ticket and add to calendar features" />
+                        <Image src={`${imgPath}ticket_test.jpg`} width={pHeight} height={pWidth} alt="Buy ticket and add to calendar features" />
                     </PaddedImg>
                     <PaddedImg>
-                        <Image src={`${imgPath}ticket_sales.png`} width={pHeight} height={pWidth} alt="Successful ticket purchase screen" />
+                        <Image src={`${imgPath}ticket_sales.jpg`} width={pHeight} height={pWidth} alt="Successful ticket purchase screen" />
                     </PaddedImg>
                 </Spread>
             </Section>
@@ -109,18 +109,18 @@ const SansarMobile = () => {
                 <h2>Live streams</h2>
                 <Spread>
                     <PaddedImg>
-                        <Image src={`${imgPath}live_event.png`} width={pWidth} height={pHeight} alt="Simple Flow for app pages, login, list, video" />
+                        <Image src={`${imgPath}live_event.jpg`} width={pWidth} height={pHeight} alt="Simple Flow for app pages, login, list, video" />
                     </PaddedImg>
                     <PaddedImg>
-                        <Image src={`${imgPath}live_event_2.png`} width={pWidth} height={pHeight} alt="Video player mockup" />
+                        <Image src={`${imgPath}live_event_2.jpg`} width={pWidth} height={pHeight} alt="Video player mockup" />
                     </PaddedImg>
                 </Spread>
                 <Spread>
                     <PaddedImg>
-                        <Image src={`${imgPath}live_event_3.png`} width={pWidth} height={pHeight} alt="Video player mockups" />
+                        <Image src={`${imgPath}live_event_3.jpg`} width={pWidth} height={pHeight} alt="Video player mockups" />
                     </PaddedImg>
                     <PaddedImg>
-                        <Image src={`${imgPath}live_event_4.png`} width={pWidth} height={pHeight} alt="Vide player mockups with chat" />
+                        <Image src={`${imgPath}live_event_4.jpg`} width={pWidth} height={pHeight} alt="Vide player mockups with chat" />
                     </PaddedImg>
                 </Spread>
             </Section>
