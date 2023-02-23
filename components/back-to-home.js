@@ -11,7 +11,7 @@ const HOME = process.env.VERCEL_ENV === "development" ? process.env.VERCEL_URL :
 const BackToHome = ({ anchor = "" }) => {
   return (
     <BackToHomeStyle>
-      <Link href={`${HOME}${anchor}`}>
+      <Link legacyBehavior href={`${HOME}${anchor}`}>
         <a><p>&lt; Back to home</p></a>
       </Link>
     </BackToHomeStyle>

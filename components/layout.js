@@ -50,7 +50,7 @@ export default function Layout({ children, home }) {
       </Wrapper>
     ) : (
       <Header>
-        <Link href="/"><a><ProfilePic /></a></Link>
+        <Link legacyBehavior href="/"><a><ProfilePic /></a></Link>
       </Header>
     )
     }
