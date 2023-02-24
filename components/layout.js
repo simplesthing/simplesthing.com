@@ -41,6 +41,9 @@ export default function Layout({ children, home }) {
         name="description"
         content="The simplest answer is always the truth"
       />
+      <meta property="og:title" content="simplesthing" />
+      <meta property="og:url" content="https://www.simplesthing.com/" />
+      <meta property="og:image" content="https://www.simplesthing.com/_next/image?url=%2Fimages%2Fprofile_waifu.jpg&w=256&q=75" />
       <link rel="manifest" href="/site.webmanifest" />
     </Head>
 
