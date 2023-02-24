@@ -41,6 +41,7 @@ const Rpm = () => {
     <Layout>
       <Head>
         <title>ready player me | simplesthing</title>
+        <meta property="og:type" content="website"></meta>
         <meta property="og:title" content="ready player me | simplesthing" />
         <meta
           property="og:url"
@@ -48,8 +49,10 @@ const Rpm = () => {
         />
         <meta
           property="og:image"
-          content="https://www.simplesthing.com/images/play/rpm-avatar.jpg"
+          content="https://www.simplesthing.com/images/play/rpm-avatar-crop.jpg"
         />
+        <meta name="twitter:card"           content="https://www.simplesthing.com/images/play/rpm-avatar-crop.jpg">
+        <meta name="twitter:title" content="ready player me | simplesthing"></meta>
       </Head>
       <BackToHome anchor="#rpm" />
       <h1>Ready Player Me</h1>
