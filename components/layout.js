@@ -35,11 +35,12 @@ const DynamicHeader = dynamic(() => import("./tiltbrush-header"), { loading: () 
 export default function Layout({ children, home }) {
   return <>
     <Head>
-      <title>ava collins | simplesthing</title>
+      <title>web developer | simplesthing</title>
       <link rel="icon" href="/favicon.ico" />
+      
       <meta
         name="description"
-        content="The simplest answer is always the truth"
+        content="The simplest thing, is usually the best thing."
       />
       <link rel="manifest" href="/site.webmanifest" />
     </Head>

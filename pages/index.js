@@ -14,10 +14,19 @@ export default function Home() {
     <div style={{ visibility: !mounted ? "hidden" : "" }}>
       <Layout home>
         <Head>
-          <title>ava collins | simplesthing</title>
+          <meta
+          property="og:url"
+          content="https://www.simplesthing.com"
+        />
+        <meta
+          property="og:image"
+          content="https://www.simplesthing.com/images/profile_waifu.jpg"
+        />
+        <meta name="twitter:card" content="https://www.simplesthing.com/images/profile_waifu.jpg"></meta>
+        <meta name="twitter:title" content="web developer | simplesthing"></meta>
         </Head>
         <h1 className="sr-only">
-          Personal website for web developer Ava Collins
+          Personal website for Ava Collins
         </h1>
         <section>
           <h2 id="about">about</h2>
@@ -27,7 +36,7 @@ export default function Home() {
             interface between the hardware and the software. Effective
             interfacing with humans is complex, there are many ways to achieve
             seemingly similar results, each with their own complications and
-            recipes for consistency while scaling fast.
+            recipes for consistency and scale.
             <DefaultMarginTop />
             The evolution of any interface begins and ends with simplicity.
             Simple easy to understand abstractions that are capable of composing

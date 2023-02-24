@@ -51,7 +51,7 @@ const Rpm = () => {
           property="og:image"
           content="https://www.simplesthing.com/images/play/rpm-avatar-crop.jpg"
         />
-        <meta name="twitter:card"           content="https://www.simplesthing.com/images/play/rpm-avatar-crop.jpg">
+        <meta name="twitter:card" content="https://www.simplesthing.com/images/play/rpm-avatar-crop.jpg"></meta>
         <meta name="twitter:title" content="ready player me | simplesthing"></meta>
       </Head>
       <BackToHome anchor="#rpm" />
