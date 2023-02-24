@@ -73,10 +73,10 @@ const Rpm = () => {
             Visage
           </a>
           , open source React components designed to showcase Ready Player Me
-          Avatars, I have my Avatar loaded below as a demonstration of how to
-          use an avatar &quot;in game&quot;. To change the avatar loaded into
-          the &quot;game&quot; paste a Ready Player Me url into the input and
-          hit enter (may take several seconds to load). If you don&apos;t have a
+          Avatars, I have my Avatar loaded as a demonstration of how to
+          use an avatar &quot;in game&quot;. To see your character loaded into
+          the &quot;game&quot; paste the Ready Player Me Avatar url into the input and
+          hit enter. If you don&apos;t have a
           Ready Player Me Avatar you can create one in the avatar creator below.
         </p>
         <figure>
