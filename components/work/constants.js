@@ -30,6 +30,8 @@ const jest = {
   url: "/images/work/sansar/mobile/JestLogo.png",
   title: "Jest",
 };
+
+
 const styledComponents = {
   url:
     "https://simplesthings.s3-us-west-2.amazonaws.com/styled-component100x.png",
@@ -112,11 +114,11 @@ export const PLAYLIST = [
   {
     title: "Ready Player Me",
     description: "Ready Player Me Api + Model Viewer web component",
-    icons: [],
+    icons: [react],
     background:
       "url(/images/play/rpm.jpg) right top",
     path: "/play/rpm",
-    anchor: "federated",
+    anchor: "rpm",
     external: false
   },
   {

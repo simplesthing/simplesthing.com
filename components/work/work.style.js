@@ -124,12 +124,14 @@ export const InfoContainer = styled.div`
 
 export const InfoTitle = styled.div`
     flex: 0 1 auto;
-    margin: 1rem 0 1rem 1rem;
+    margin: 1rem 0 0rem 1rem;
     @media ${mqSmall} {
       margin-top: 1.1rem;
+  
     }
     @media ${mqMedium} {
       margin-top: 1.25rem;
+
     }
     @media ${mqXlarge} {
       margin-top: 1.75rem;

@@ -69,7 +69,7 @@ const Rpm = () => {
   const inp = useRef();
 
   const unload = () => {
-    setTimeout(() => setLoading(false), 1000);
+    setTimeout(() => setLoading(false), 1500);
   };
   
   const clearError = () => {
@@ -117,7 +117,7 @@ const Rpm = () => {
           Using open source components designed to showcase Ready Player Me
           Avatars, you can rotate and zoom the 3D model. I have loaded my own Avatar by default to demonstrate the use
           of an avatar &quot;in game&quot;. To change the avatar loaded into the viewer
-          paste a Ready Player Me url into the input and hit enter. If you
+          paste a Ready Player Me url into the input and hit enter (may take several seconds to load). If you
           don&apos;t have a Ready Player Me Avatar you can create one in the
           avatar creator below.
         </p>
