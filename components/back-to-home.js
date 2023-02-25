@@ -12,7 +12,7 @@ const BackToHome = ({ anchor = "" }) => {
   return (
     <BackToHomeStyle>
       <Link legacyBehavior href={`${HOME}${anchor}`}>
-        <a><p>&lt; Back to home</p></a>
+        <a><p aria-label="go back to homepage">&lt; Back to home</p></a>
       </Link>
     </BackToHomeStyle>
   );

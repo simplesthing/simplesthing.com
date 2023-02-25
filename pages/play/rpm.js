@@ -16,7 +16,7 @@ const Rpm = () => {
   const inp = useRef();
 
   const onEnter = (e) => {
-    if (e.keyCode === 13) {
+    if (!e.keyCode || e.keyCode === 13) {
       const url = e.target.value;
       const regex = /^https:\/\/(.*).readyplayer.me\/(.*).glb/;
       if (regex.test(url)) {
@@ -51,8 +51,6 @@ const Rpm = () => {
           property="og:image"
           content="https://www.simplesthing.com/images/play/rpm-avatar-crop.jpg"
         />
-        <meta name="twitter:card" content="https://www.simplesthing.com/images/play/rpm-avatar-crop.jpg"></meta>
-        <meta name="twitter:title" content="ready player me | simplesthing"></meta>
       </Head>
       <BackToHome anchor="#rpm" />
       <h1>Ready Player Me</h1>
@@ -76,11 +74,11 @@ const Rpm = () => {
             Visage
           </a>
           , open source React components designed to showcase Ready Player Me
-          Avatars, I have my Avatar loaded as a demonstration of how to
-          use an avatar &quot;in game&quot;. To see your character loaded into
-          the &quot;game&quot; paste the Ready Player Me Avatar url into the input and
-          hit enter. If you don&apos;t have a
-          Ready Player Me Avatar you can create one in the avatar creator below.
+          Avatars, I have my Avatar loaded as a demonstration of how to use an
+          avatar &quot;in game&quot;. To see your character loaded into the
+          &quot;game&quot; paste the Ready Player Me Avatar url into the input
+          and hit enter. If you don&apos;t have a Ready Player Me Avatar you can
+          create one in the avatar creator below.
         </p>
         <figure>
           <Model>
@@ -91,17 +89,27 @@ const Rpm = () => {
               onLoaded={onLoaded}
             />
           </Model>
-          <figcaption className="sr-only">An elephant at sunset</figcaption>
+          <figcaption className="sr-only">An html canvas element displaying a 3D model of my Ready Player Me avatar. </figcaption>
         </figure>
-        <Input
-          type="text"
-          placeholder="avatar url"
-          title="avatar url"
-          onKeyDown={onEnter}
-          onFocus={clearError}
-          onChange={clearError}
-          ref={inp}
-        />
+        <Form>
+          <Input
+            type="text"
+            placeholder="avatar url"
+            title="avatar url"
+            id="avatarUrl"
+            onKeyDown={onEnter}
+            onFocus={clearError}
+            onChange={clearError}
+            ref={inp}
+          />
+          <FormEnter
+            title="Enter avatar url form"
+            name="Enter"
+            onClick={onEnter}
+          >
+            ENTER
+          </FormEnter>
+        </Form>
         <Wrapper>
           {!error && <p> &nbsp;</p>}
           {error && (
@@ -139,7 +147,7 @@ const Rpm = () => {
           ></Iframe>
         </Wrapper>
       </section>
-
+      
       <BackToHome anchor="#rpm" />
     </Layout>
   );
@@ -164,21 +172,6 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const Input = styled.input`
-  position: relative;
-  width: 60%;
-  display: block;
-  margin: 0 auto;
-  font-size: 18px;
-  padding: 10px;
-  background: papayawhip;
-  border: none;
-  border-radius: 3px;
-  ::placeholder {
-    color: accent1;
-  }
-`;
-
 const Iframe = styled.iframe`
   max-width: 1080px;
   max-height: 800px;
@@ -197,6 +190,36 @@ const Error = styled.p`
 const Em = styled.em`
   font-style: italic;
   font-size: 0.9rem;
+`;
+
+const Form = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
+const Input = styled.input`
+  position: relative;
+  width: 60%;
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+  ::placeholder {
+    color: accent1;
+  }
+`;
+
+const FormEnter = styled.button`
+  padding: 5px 10px;
+  background-color: #ff3305;
+  border: 1px solid papayawhip;
+  color: papayawhip;
+  font-size: 1.25rem;
+  border-radius: 3px;
+  margin: 0 0.5rem;
 `;
 
 const Spinner = styled.div`
