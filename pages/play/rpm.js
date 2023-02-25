@@ -17,7 +17,7 @@ const Rpm = () => {
 
   const onEnter = (e) => {
     if (!e.keyCode || e.keyCode === 13) {
-      const url = e.target.value;
+      const url = inp.current.value;
       const regex = /^https:\/\/(.*).readyplayer.me\/(.*).glb/;
       if (regex.test(url)) {
         setModelUrl(url);
