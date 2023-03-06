@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { globalCss } from "../components/styles";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 const GlobalStyle = createGlobalStyle`${globalCss}`;
 
