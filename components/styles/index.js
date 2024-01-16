@@ -2,7 +2,10 @@ import { darken, modularScale, stripUnit } from "polished";
 
 import styled from "styled-components";
 
-export const base = "#313131";
+// export const base = "#313131";
+// export const lightBase = "#D8C9C5";
+
+export const base = "#131313";
 export const lightBase = "#D8C9C5";
 
 export const accent1 = "#ff3305";
